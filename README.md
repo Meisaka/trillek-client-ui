@@ -14,7 +14,7 @@ You can install the dependencies by executing these commands.
 bundle install
 ```
 
-## Running in your browser
+## Running the server(s)
 
 It's possible to load the UI within your browser using a small HTTP server; I like to use Python for this. Python's built in server is invoked differently between versions 2 and 3, simply `cd` to this directory and execute the appropriate command.
 
@@ -26,7 +26,11 @@ python -m http.server
 python -m SimpleHTTPServer
 ```
 
-Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][].
+Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][]. If you want the SASS code to recompile it's self as you change it, you can run the following command as well.
+
+```
+compass watch
+```
 
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
