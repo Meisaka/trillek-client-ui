@@ -6,12 +6,14 @@ It is a single page web application that can interface with the game through a s
 
 The following systems are used to fetch the dependencies.
 
- * [Bundler][]
+ * [bundler][]
+ * [npm][]
 
 You can install the dependencies by executing these commands.
 
 ```bash
 bundle install
+npm install
 ```
 
 ## Running the server(s)
