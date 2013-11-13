@@ -2,6 +2,8 @@
 @import 'susy';
 @import 'normalize';
 
+@include normalize;
+
 // Settings.
 
 @import 'modules/all';
