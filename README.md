@@ -6,14 +6,14 @@ It is a single page web application that can interface with the game through a s
 
 The following systems are used to fetch the dependencies.
 
- * [bundler][]
- * [npm][]
+ * [Bundler][]
+ * [Bower][]
 
 You can install the dependencies by executing these commands.
 
 ```bash
 bundle install
-npm install
+bower install
 ```
 
 ## Compiling the SASS to CSS
@@ -50,5 +50,6 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
+[bower]: http://bower.io/
 [node]: http://nodejs.org/
 [npm]: https://npmjs.org/

@@ -1,0 +1,26 @@
+{
+  "name": "trillek-ui",
+  "version": "0.0.0",
+  "authors": [
+    "Oliver Caldwell <olliec87@gmail.com>"
+  ],
+  "description": "Project Trillek UI",
+  "main": "index.html",
+  "keywords": [
+    "ui",
+    "trillek"
+  ],
+  "license": "MIT",
+  "homepage": "http://trillek.org/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.9"
+  }
+}
