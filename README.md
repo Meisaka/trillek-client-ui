@@ -2,6 +2,18 @@ This repository contains the source for the web view UI layer which will be used
 
 It is a single page web application that can interface with the game through a specific set of exposed API methods.
 
+## Dependencies
+
+The following systems are used to fetch the dependencies.
+
+ * [Bundler][]
+
+You can install the dependencies by executing these commands.
+
+```bash
+bundle install
+```
+
 ## Running in your browser
 
 It's possible to load the UI within your browser using a small HTTP server; I like to use Python for this. Python's built in server is invoked differently between versions 2 and 3, simply `cd` to this directory and execute the appropriate command.
@@ -17,5 +29,6 @@ python -m SimpleHTTPServer
 Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][].
 
 [trillek]: http://trillek.org/
+[bundler]: http://bundler.io/
 [node]: http://nodejs.org/
 [npm]: https://npmjs.org/
