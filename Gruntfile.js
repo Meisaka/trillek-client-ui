@@ -1,6 +1,9 @@
+var packageFilePath = './package.json';
+var packageFile = require(packageFilePath);
+
 module.exports = function (grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('./package.json'),
+		pkg: grunt.file.readJSON(packageFilePath),
 		compass: {
 			dist: {
 				options: {
@@ -22,14 +25,29 @@ module.exports = function (grunt) {
 					wrap: true
 				}
 			}
+		},
+		compress: {
+			main: {
+				options: {
+					archive: ['dist/', packageFile.name, '-', packageFile.version, '.zip'].join(''),
+					mode: 'zip'
+				},
+				src: [
+					'./assets/css/main.css',
+					'./assets/js/main.min.js',
+					'./loader.html'
+				]
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-compress');
 
 	grunt.registerTask('default', [
 		'compass',
-		'requirejs'
+		'requirejs',
+		'compress'
 	]);
 };
