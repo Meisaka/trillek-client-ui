@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 					name: '../../bower_components/almond/almond',
 					include: 'main',
 					mainConfigFile: './assets/js/main.js',
-					out: './assets/js/main.min.js',
+					out: './build/assets/js/main.min.js',
 					optimize: 'uglify2',
 					wrap: true
 				}
@@ -32,10 +32,12 @@ module.exports = function (grunt) {
 					archive: ['dist/', packageFile.name, '-', packageFile.version, '.zip'].join(''),
 					mode: 'zip'
 				},
-				src: [
-					'./assets/css/main.css',
-					'./assets/js/main.min.js',
-					'./loader.html'
+				files: [
+					{
+						expand: true,
+						cwd: './build',
+						src: ['**']
+					}
 				]
 			}
 		}

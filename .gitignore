@@ -1,6 +1,5 @@
 .sass-cache/
 /node_modules/
 /bower_components/
-/assets/css/
+/build/assets/
 /dist/
-*.min.js
