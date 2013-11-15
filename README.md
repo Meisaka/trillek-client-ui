@@ -8,12 +8,14 @@ The following systems are used to fetch the dependencies.
 
  * [Bundler][]
  * [Bower][]
+ * [NPM][]
 
 You can install the dependencies by executing these commands.
 
 ```bash
 bundle install
 bower install
+npm install
 ```
 
 ## Compiling the SASS to CSS
