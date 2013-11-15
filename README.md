@@ -18,6 +18,12 @@ bower install
 npm install
 ```
 
+If you wish to build the project using [grunt][] you'll need the `grunt-cli` package installed globally. You can do this with the following command.
+
+```bash
+npm install -g grunt-cli
+```
+
 ## Compiling the SASS to CSS
 
 Once you have all of the dependencies installed, you'll be able to compile the CSS. Because it is all written in SASS (a superset of CSS) you need to execute the following line to pre-process it.
@@ -50,8 +56,23 @@ python -m SimpleHTTPServer
 
 Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][].
 
+## Building
+
+Presuming you have all of the dependencies installed correctly, you can simply execute grunt.
+
+```bash
+grunt
+```
+
+That's it. That will compile and minify the SASS, plus build any requires sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
+
+Once you're built you can load the built files using `./index.build.html` instead of just `./index.html`. The `.build.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
+
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
 [node]: http://nodejs.org/
 [npm]: https://npmjs.org/
+[grunt]: http://gruntjs.com/
+[requirejs]: http://requirejs.org/
+[almond]: https://github.com/jrburke/almond
