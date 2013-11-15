@@ -68,6 +68,8 @@ That's it. That will compile and minify the SASS, plus build any requires sprite
 
 Once you're built you can load the built files using `./build/loader.html` instead of `./loader.html`. The `./build/loader.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
 
+All built files are stored within `./build/assets/`, once the build is complete it will compress the contents of that directory and drop a zip file into `./dist` named using the current project name and version. For example: `trillek-ui-1.0.0.zip`.
+
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
