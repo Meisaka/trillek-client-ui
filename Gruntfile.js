@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		copy: {
 			main: {
 				expand: true,
-				src: './assets/images/**',
+				src: './assets/images/raw/**',
 				dest: './build/'
 			}
 		},
