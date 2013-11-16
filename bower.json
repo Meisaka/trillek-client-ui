@@ -7,6 +7,7 @@
     "mustache": "~0.7.3",
     "requirejs-mustache": "*",
     "almond": "~0.2.6",
-    "stapes": "~0.8.0"
+    "stapes": "~0.8.0",
+    "hasher": "~1.2.0"
   }
 }
