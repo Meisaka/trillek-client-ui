@@ -22,6 +22,18 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		imagemin: {
+			dynamic: {
+				files: [
+					{
+						expand: true,
+						cwd: './build/assets/',
+						src: '**/*.{png,jpg,gif}',
+						dest: './build/assets'
+					}
+				]
+			}
+		},
 		jshint: {
 			all: './assets/js/**/*.js'
 		},
@@ -56,6 +68,7 @@ module.exports = function (grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-compress');
@@ -63,6 +76,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', [
 		'copy',
 		'compass',
+		'imagemin',
 		'jshint',
 		'requirejs',
 		'compress'
