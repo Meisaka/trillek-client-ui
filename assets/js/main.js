@@ -12,10 +12,4 @@ require.config({
 	}
 });
 
-require([
-	'stache!hello'
-], function (helloTemplate) {
-	document.body.innerHTML = helloTemplate({
-		name: 'Wolfy87'
-	});
-});
+require(function () {});
