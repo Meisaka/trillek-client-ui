@@ -4,13 +4,21 @@ var packageFile = require(packageFilePath);
 module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON(packageFilePath),
+		copy: {
+			main: {
+				expand: true,
+				src: './assets/images/**',
+				dest: './build/'
+			}
+		},
 		compass: {
 			dist: {
 				options: {
 					config: './config.rb',
 					environment: 'production',
 					outputStyle: 'compressed',
-					noLineComments: true
+					noLineComments: true,
+					imagesDir: 'build/assets/images'
 				}
 			}
 		},
@@ -43,11 +51,13 @@ module.exports = function (grunt) {
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 
 	grunt.registerTask('default', [
+		'copy',
 		'compass',
 		'requirejs',
 		'compress'
