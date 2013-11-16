@@ -1,4 +1,5 @@
 {
+  "name": "trillek-ui",
   "dependencies": {
     "requirejs": "~2.1.9",
     "maria": "~1.1.0",
