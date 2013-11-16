@@ -56,6 +56,10 @@ python -m SimpleHTTPServer
 
 Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][].
 
+## Tests
+
+All tests are stored within `./tests`, they use [tape][] for assertions and execution. You can run the tests on your command line with `npm test`.
+
 ## Building
 
 Presuming you have all of the dependencies installed correctly, you can simply execute grunt.
@@ -72,6 +76,7 @@ All built files are stored within `./build/assets/`, once the build is complete 
 
 If you have a build up of build artefacts, such as images that are no longer found within the source, you can remove them by executing `grunt clean`. This will remove the entirety of `./build/assets`.
 
+[tape]: https://github.com/substack/tape
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
