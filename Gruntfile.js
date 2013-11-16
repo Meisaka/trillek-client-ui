@@ -63,7 +63,8 @@ module.exports = function (grunt) {
 					}
 				]
 			}
-		}
+		},
+		clean: ['./build/assets/**']
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-copy');
@@ -72,6 +73,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-compress');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
 	grunt.registerTask('default', [
 		'copy',
