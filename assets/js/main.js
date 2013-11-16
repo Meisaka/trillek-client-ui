@@ -18,8 +18,6 @@ require([
 	'crossroads',
 	'hasher'
 ], function (crossroads, hasher) {
-	'use strict';
-
 	var parseHash = crossroads.parse.bind(crossroads);
 	hasher.initialized.add(parseHash);
 	hasher.changed.add(parseHash);
