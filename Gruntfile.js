@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 				options: {
 					name: '../../bower_components/almond/almond',
 					include: 'main',
-					mainConfigFile: './assets/js/main.js',
+					mainConfigFile: './assets/js/require-config.js',
 					out: './build/assets/js/main.min.js',
 					optimize: 'uglify2',
 					wrap: true

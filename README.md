@@ -6,9 +6,9 @@ It is a single page web application that can interface with the game through a s
 
 The following systems are used to fetch the dependencies.
 
- * [Bundler][]
- * [Bower][]
- * [NPM][]
+ * [Bundler][] (Ruby)
+ * [Bower][] (Browser)
+ * [NPM][] (Node.js)
 
 You can install the dependencies by executing these commands.
 
@@ -58,7 +58,9 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 ## Tests
 
-All tests are stored within `./tests`, they use [tape][] for assertions and execution. You can run the tests on your command line with `npm test`.
+All tests are stored within `./tests`, they use [chai][] and [mocha][] for assertions and execution. You can run the tests by opening `./tests/index.html` in your browser.
+
+Although the tests should run in any modern browser, the main one we need to worry about is Chrome / Chromium. This is because the game will render the UI using WebKit / Blink, the rendering engine used within Chrome.
 
 ## Building
 
@@ -76,7 +78,8 @@ All built files are stored within `./build/assets/`, once the build is complete 
 
 If you have a build up of build artefacts, such as images that are no longer found within the source, you can remove them by executing `grunt clean`. This will remove the entirety of `./build/assets`.
 
-[tape]: https://github.com/substack/tape
+[chai]: http://chaijs.com/
+[mocha]: http://visionmedia.github.io/mocha/
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
