@@ -1,4 +1,4 @@
-require([
+define([
 	'require-config',
 	'utils/router'
 ], function (requireConfig, router) {

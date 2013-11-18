@@ -9,8 +9,9 @@ mocha.setup('tdd');
 mocha.reporter('html');
 window.assert = chai.assert;
 
-require([
-	'require-config'
+define([
+	'require-config',
+	'test/utils/query'
 ], function () {
 	mocha.run();
 });

@@ -13,3 +13,5 @@ require.config({
 		path: '../templates/'
 	}
 });
+
+define();
