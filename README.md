@@ -78,10 +78,40 @@ All built files are stored within `./build/assets/`, once the build is complete 
 
 If you have a build up of build artefacts, such as images that are no longer found within the source, you can remove them by executing `grunt clean`. This will remove the entirety of `./build/assets`.
 
+## Contributing
+
+### JavaScript
+
+Make sure you adhere to [TDD][] by writing failing tests then writing the JavaScript to make them pass. Document all of your functions and classes with [JSDoc][] and check all of your code with [JSHint][].
+
+### SASS / Compass
+
+Structure your SASS in accordance with [The SASS Way][tsw]. When in doubt, copy what's already there.
+
+Use sprite sheets where you can, Compass is brilliant at it, and use the `images/raw` directory when you don't want to put something in a sprite sheet. This is usually because it's a big, one off, image. Do not put images in the `images` directory without placing them in a sprite sheet directory or the raw directory. They will not be copied over during the build process.
+
+### General code stuff
+
+Try to follow the principals outlined in "Clean Code", an excellent book that I highly recommend reading. There are some overviews dotted around the internet that will give you some quick insights though.
+
+Keep inline comments to a minimum or, preferably, don't use them at all. Use JSDoc comments to explain what the big things do, use great names for the rest. The code should be self explanatory and easy to read.
+
+### Git
+
+Follow [nvie's branching model][nvies], that means creating `feature-X` branches that came from develop and sending pull requests into the develop branch. Nothing touches master apart from release branches managed internally.
+
+You can use the [gitflow][] commands to make this work flow even easier. I'd highly recommend it.
+
 ## Licence
 
 Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 
+[gitflow]: https://github.com/nvie/gitflow
+[nvies]: http://nvie.com/posts/a-successful-git-branching-model/
+[tsw]: http://thesassway.com/beginner/how-to-structure-a-sass-project
+[jshint]: http://www.jshint.com/
+[jsdoc]: http://usejsdoc.org/
+[tdd]: http://en.wikipedia.org/wiki/Test-driven_development
 [unlicence]: http://unlicense.org/
 [chai]: http://chaijs.com/
 [mocha]: http://visionmedia.github.io/mocha/
