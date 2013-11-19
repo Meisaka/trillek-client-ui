@@ -78,6 +78,11 @@ All built files are stored within `./build/assets/`, once the build is complete 
 
 If you have a build up of build artefacts, such as images that are no longer found within the source, you can remove them by executing `grunt clean`. This will remove the entirety of `./build/assets`.
 
+## Licence
+
+Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
+
+[unlicence]: http://unlicense.org/
 [chai]: http://chaijs.com/
 [mocha]: http://visionmedia.github.io/mocha/
 [trillek]: http://trillek.org/
