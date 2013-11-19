@@ -11,7 +11,9 @@ window.assert = chai.assert;
 
 define([
 	'require-config',
+	'utils/router',
 	'test/utils/query'
-], function () {
+], function (config, router) {
+	router.start();
 	mocha.run();
 });
