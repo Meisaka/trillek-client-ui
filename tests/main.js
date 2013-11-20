@@ -10,7 +10,8 @@ mocha.reporter('html');
 window.assert = chai.assert;
 
 define([
-	'require-config'
+	'require-config',
+	'test/views/AbstractView'
 ], function (config) {
 	mocha.run();
 });
