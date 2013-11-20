@@ -10,10 +10,7 @@ mocha.reporter('html');
 window.assert = chai.assert;
 
 define([
-	'require-config',
-	'utils/router',
-	'test/utils/query'
-], function (config, router) {
-	router.start();
+	'require-config'
+], function (config) {
 	mocha.run();
 });

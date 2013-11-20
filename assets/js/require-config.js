@@ -6,7 +6,8 @@ require.config({
 		stapes: '../../bower_components/stapes/stapes',
 		crossroads: '../../bower_components/crossroads.js/dist/crossroads',
 		hasher: '../../bower_components/hasher/dist/js/hasher',
-		signals: '../../bower_components/js-signals/dist/signals'
+		signals: '../../bower_components/js-signals/dist/signals',
+		qwery: '../../bower_components/qwery/qwery'
 	},
 	stache: {
 		extension: '.mustache',
