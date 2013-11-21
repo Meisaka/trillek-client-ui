@@ -1,5 +1,5 @@
 define([
-	'views/AbstractView'
+	'trillek/views/AbstractView'
 ], function (AbstractView) {
 	suite('views/AbstractView', function () {
 		suite('#render()', function () {

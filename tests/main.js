@@ -1,7 +1,6 @@
 require.config({
-	baseUrl: '../assets/js/',
 	paths: {
-		test: '../../tests/src'
+		trillek: '../assets/js/trillek',
 	}
 });
 
@@ -10,8 +9,8 @@ mocha.reporter('html');
 window.assert = chai.assert;
 
 define([
-	'require-config',
-	'test/views/AbstractView'
+	'../assets/js/require-config',
+	'tests/views/AbstractView'
 ], function (config) {
 	mocha.run();
 });
