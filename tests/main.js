@@ -10,8 +10,10 @@ window.assert = chai.assert;
 
 define([
 	'../assets/js/require-config',
-	'tests/views/AbstractView',
-	'tests/pages/all'
+
+	'tests/Router',
+	'tests/pages/all',
+	'tests/views/AbstractView'
 ], function (config) {
 	mocha.run();
 });
