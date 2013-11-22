@@ -1,5 +1,5 @@
 define([
-	'trillek/Router'
+	'trillek/PageRouter'
 ], function (Router) {
 	suite('Router', function () {
 		setup(function () {

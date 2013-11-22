@@ -1,10 +1,10 @@
 require([
 	'require-config',
-	'trillek/Router'
-], function (requireConfig, Router) {
+	'trillek/PageRouter'
+], function (requireConfig, PageRouter) {
 	var trillek = window.trillek = {
-		router: new Router()
+		pageRouter: new PageRouter()
 	};
 
-	trillek.router.initialiseHasher();
+	trillek.pageRouter.initialiseHasher();
 });

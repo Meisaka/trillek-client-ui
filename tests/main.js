@@ -11,8 +11,8 @@ window.assert = chai.assert;
 define([
 	'../assets/js/require-config',
 
-	'tests/Router',
 	'tests/pages/all',
+	'tests/PageRouter',
 	'tests/views/AbstractView'
 ], function (config) {
 	mocha.run();
