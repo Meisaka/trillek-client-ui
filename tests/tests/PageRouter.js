@@ -1,9 +1,9 @@
 define([
 	'trillek/PageRouter'
-], function (Router) {
-	suite('Router', function () {
+], function (PageRouter) {
+	suite('PageRouter', function () {
 		setup(function () {
-			this.setup = new Router();
+			this.pageRouter = new PageRouter();
 		});
 	});
 });
