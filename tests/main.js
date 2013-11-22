@@ -12,6 +12,7 @@ define([
 	'../assets/js/require-config',
 
 	'tests/pages/all',
+	'tests/pages/AbstractPage',
 	'tests/PageRouter',
 	'tests/views/AbstractView'
 ], function (config) {
