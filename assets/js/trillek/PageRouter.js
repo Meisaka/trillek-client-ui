@@ -9,7 +9,7 @@ define([
 	 *
 	 * @class
 	 */
-	return Stapes.subclass(/** @lends Router.prototype */ {
+	var PageRouter = Stapes.subclass(/** @lends Router.prototype */ {
 		/**
 		 * Initialises the hasher module and hooks it into crossroads. On
 		 * initialisation, the hasher will check the hash for the first time.
@@ -21,4 +21,6 @@ define([
 			hasher.init();
 		}
 	});
+
+	return PageRouter;
 });

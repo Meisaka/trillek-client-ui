@@ -7,7 +7,7 @@ define([
 	 *
 	 * @class
 	 */
-	return Stapes.subclass(/** @lends AbstractView.prototype */ {
+	var AbstractView = Stapes.subclass(/** @lends AbstractView.prototype */ {
 		/**
 		 * Renders the view to a string, probably with a template, using the
 		 * optionally provided model.
@@ -18,4 +18,6 @@ define([
 		 */
 		render: _.noop
 	});
+
+	return AbstractView;
 });
