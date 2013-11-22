@@ -10,5 +10,15 @@ define([
 	 * @class
 	 */
 	return Stapes.subclass(/** @lends Router.prototype */ {
+		/**
+		 * Initialises the hasher module and hooks it into crossroads. On
+		 * initialisation, the hasher will check the hash for the first time.
+		 */
+		initialiseHasher: function () {
+			var parseHash = crossroads.parse.bind(crossroads);
+			hasher.initialized.add(parseHash);
+			hasher.changed.add(parseHash);
+			hasher.init();
+		}
 	});
 });
