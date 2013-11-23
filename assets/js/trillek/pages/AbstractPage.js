@@ -13,6 +13,16 @@ define([
 	 * @class
 	 */
 	var AbstractPage = Stapes.subclass(/** @lends AbstractPage.prototype */ {
+		/**
+		 * Sets the new container element for the page and dispatches a
+		 * containerElementSet event.
+		 *
+		 * @param {Element} containerElement
+		 */
+		setContainerElement: function (containerElement) {
+			this._containerElement = containerElement;
+			this.emit('containerElementSet', containerElement);
+		}
 	});
 
 	AbstractPage.extend(/** @lends AbstractPage */ {
