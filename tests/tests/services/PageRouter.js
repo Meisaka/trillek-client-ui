@@ -1,9 +1,9 @@
 define([
 	'crossroads',
-	'trillek/PageRouter',
+	'trillek/services/PageRouter',
 	'trillek/pages/AbstractPage'
 ], function (crossroads, PageRouter, AbstractPage) {
-	suite('PageRouter', function () {
+	suite('services/PageRouter', function () {
 		setup(function () {
 			this.router = crossroads.create();
 			this.pageRouter = new PageRouter();

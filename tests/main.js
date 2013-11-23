@@ -13,7 +13,7 @@ define([
 
 	'tests/pages/all',
 	'tests/pages/AbstractPage',
-	'tests/PageRouter',
+	'tests/services/PageRouter',
 	'tests/views/AbstractView'
 ], function (config) {
 	mocha.run();

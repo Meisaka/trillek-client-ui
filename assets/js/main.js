@@ -1,6 +1,6 @@
 require([
 	'require-config',
-	'trillek/PageRouter'
+	'trillek/services/PageRouter'
 ], function (requireConfig, PageRouter) {
 	var trillek = window.trillek = {
 		pageRouter: new PageRouter()
