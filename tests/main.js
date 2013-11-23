@@ -15,6 +15,8 @@ define([
 	'tests/pages/AbstractPage',
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
+	'tests/controllers/AbstractController',
+	'tests/models/AbstractModel',
 	'tests/views/AbstractView'
 ], function (config) {
 	mocha.run();
