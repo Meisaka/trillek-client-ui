@@ -1,6 +1,7 @@
 define(function () {
 	require.config({
 		paths: {
+			templates: '../templates',
 			mustache: '../../bower_components/mustache/mustache',
 			text: '../../bower_components/requirejs-text/text',
 			stache: '../../bower_components/requirejs-mustache/stache',
@@ -12,8 +13,7 @@ define(function () {
 			lodash: '../../bower_components/lodash/dist/lodash'
 		},
 		stache: {
-			extension: '.mustache',
-			path: '../templates/'
+			extension: '.mustache'
 		}
 	});
 });
