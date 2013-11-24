@@ -19,6 +19,8 @@ define([
 	'tests/services/PageDisplayManager',
 
 	'tests/controllers/AbstractController',
+	'tests/controllers/SplashPageController',
+
 	'tests/models/AbstractModel',
 	'tests/views/AbstractView'
 ], function (config) {
