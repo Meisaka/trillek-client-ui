@@ -13,8 +13,11 @@ define([
 
 	'tests/pages/all',
 	'tests/pages/AbstractPage',
+	'tests/pages/SplashPage',
+
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
+
 	'tests/controllers/AbstractController',
 	'tests/models/AbstractModel',
 	'tests/views/AbstractView'
