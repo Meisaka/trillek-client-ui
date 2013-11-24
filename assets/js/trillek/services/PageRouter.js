@@ -1,8 +1,9 @@
 define([
 	'stapes',
 	'crossroads',
-	'hasher'
-], function (Stapes, crossroads, hasher) {
+	'hasher',
+	'lodash'
+], function (Stapes, crossroads, hasher, _) {
 	/**
 	 * Thin wrapper around the crossroads and hasher libraries. Allows for easy
 	 * initialisation and mapping of pages to routes.
@@ -15,10 +16,18 @@ define([
 		 * initialisation, the hasher will check the hash for the first time.
 		 */
 		initialiseHasher: function () {
-			var parseHash = crossroads.parse.bind(crossroads);
-			hasher.initialized.add(parseHash);
-			hasher.changed.add(parseHash);
+			hasher.initialized.add(this.parseRoute);
+			hasher.changed.add(this.parseRoute);
 			hasher.init();
+		},
+
+		/**
+		 * Delegates the route to crossroads for parsing.
+		 *
+		 * @param {String} route
+		 */
+		parseRoute: function (route) {
+			crossroads.parse(route);
 		},
 
 		/**
