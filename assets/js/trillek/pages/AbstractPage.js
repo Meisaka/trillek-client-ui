@@ -26,6 +26,15 @@ define([
 		},
 
 		/**
+		 * Sets the container elements HTML content to the provided value.
+		 *
+		 * @param {String} content
+		 */
+		setContainerElementHTML: function (content) {
+			this._containerElement.innerHTML = content;
+		},
+
+		/**
 		 * This function will be called when the container element is set. It
 		 * should initialise any required classes such as controllers.
 		 *
