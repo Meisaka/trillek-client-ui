@@ -21,8 +21,10 @@ define([
 	'tests/controllers/AbstractController',
 	'tests/controllers/SplashPageController',
 
-	'tests/models/AbstractModel',
-	'tests/views/AbstractView'
+	'tests/views/AbstractView',
+	'tests/views/SplashPageView',
+
+	'tests/models/AbstractModel'
 ], function (config) {
 	mocha.run();
 });
