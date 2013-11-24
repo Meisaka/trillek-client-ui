@@ -22,7 +22,16 @@ define([
 		setContainerElement: function (containerElement) {
 			this._containerElement = containerElement;
 			this.emit('containerElementSet', containerElement);
-		}
+			this.initialisePage();
+		},
+
+		/**
+		 * This function will be called when the container element is set. It
+		 * should initialise any required classes such as controllers.
+		 *
+		 * @abstract
+		 */
+		initialisePage: _.noop
 	});
 
 	AbstractPage.extend(/** @lends AbstractPage */ {
@@ -30,6 +39,7 @@ define([
 		 * On a concrete page, this should be set to your desired route signal.
 		 * It will be used to instantiate the page when the route is matched.
 		 *
+		 * @abstract
 		 * @type {Object} JS-Signal route from crossroads.
 		 */
 		route: _.noop

@@ -23,5 +23,11 @@ define([
 				assert.strictEqual(result, expected, 'got the element back out of the page through the event');
 			});
 		});
+
+		suite('#initialisePage()', function () {
+			test('method should be a noop', function () {
+				assert.isUndefined(this.page.initialisePage(), 'the function is a noop');
+			});
+		});
 	});
 });
