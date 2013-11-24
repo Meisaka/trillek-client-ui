@@ -1,9 +1,8 @@
 define([
 	'stapes',
 	'crossroads',
-	'hasher',
-	'lodash'
-], function (Stapes, crossroads, hasher, _) {
+	'hasher'
+], function (Stapes, crossroads, hasher) {
 	/**
 	 * Thin wrapper around the crossroads and hasher libraries. Allows for easy
 	 * initialisation and mapping of pages to routes.

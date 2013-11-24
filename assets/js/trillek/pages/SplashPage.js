@@ -12,6 +12,11 @@ define([
 	 * @augments AbstractPage
 	 */
 	var SplashPage = AbstractPage.subclass(/** @lends SplashPage.prototype */ {
+		/**
+		 * Initialises the controller for the splash page.
+		 */
+		initialisePage: function () {
+		}
 	});
 
 	SplashPage.extend(/** @lends SplashPage */ {
@@ -20,7 +25,7 @@ define([
 		 *
 		 * @type {Object}
 		 */
-		route: crossroads.addRoute('/')
+		route: crossroads.addRoute('/'),
 	});
 
 	return SplashPage;
