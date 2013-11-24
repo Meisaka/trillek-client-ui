@@ -28,6 +28,7 @@ define([
 			}.bind(this));
 
 			this._containerElement = document.createElement('div');
+			this._containerElement.classList.add('trillek-page-container');
 			document.body.appendChild(this._containerElement);
 		},
 
