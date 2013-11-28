@@ -45,13 +45,14 @@ define([
 
 	AbstractPage.extend(/** @lends AbstractPage */ {
 		/**
-		 * On a concrete page, this should be set to your desired route signal.
+		 * On a concrete page, this should return your desired route signal.
 		 * It will be used to instantiate the page when the route is matched.
 		 *
 		 * @abstract
-		 * @type {Object} JS-Signal route from crossroads.
+		 * @param {Object} crossroads The current crossroads object you should create from.
+		 * @return {Object} JS-Signal route from crossroads.
 		 */
-		route: _.noop
+		createRoute: _.noop
 	});
 
 	return AbstractPage;

@@ -5,11 +5,12 @@ define([
 ], function (crossroads, PageRouter, AbstractPage) {
 	suite('services/PageRouter', function () {
 		setup(function () {
-			this.router = crossroads.create();
 			this.pageRouter = new PageRouter();
 			this.TestPage = AbstractPage.subclass();
 			this.TestPage.extend({
-				route: this.router.addRoute('foo')
+				createRoute: function (crossroads) {
+					return crossroads.addRoute('foo');
+				}
 			});
 		});
 
@@ -18,18 +19,9 @@ define([
 				var spy = sinon.spy();
 				this.pageRouter.bindPage(this.TestPage);
 				this.pageRouter.on('routeMatched', spy);
-				this.router.parse('foo');
+				this.pageRouter.parseRoute('foo');
 
 				assert.isTrue(spy.called, 'the listener was called');
-			});
-
-			test('the event that is fired when we have a match passes the route', function () {
-				var spy = sinon.spy();
-				this.pageRouter.bindPage(this.TestPage);
-				this.pageRouter.on('routeMatched', spy);
-				this.router.parse('foo');
-
-				assert.strictEqual(spy.args[0][0], this.TestPage.route, 'the correct route was passed');
 			});
 		});
 

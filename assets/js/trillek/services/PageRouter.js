@@ -11,12 +11,20 @@ define([
 	 */
 	var PageRouter = Stapes.subclass(/** @lends PageRouter.prototype */ {
 		/**
+		 * @constructs
+		 */
+		constructor: function () {
+			this._crossroads = crossroads.create();
+		},
+
+		/**
 		 * Initialises the hasher module and hooks it into crossroads. On
 		 * initialisation, the hasher will check the hash for the first time.
 		 */
 		initialiseHasher: function () {
-			hasher.initialized.add(this.parseRoute);
-			hasher.changed.add(this.parseRoute);
+			var parseRoute = this.parseRoute.bind(this);
+			hasher.initialized.add(parseRoute);
+			hasher.changed.add(parseRoute);
 			hasher.init();
 		},
 
@@ -26,7 +34,7 @@ define([
 		 * @param {String} route
 		 */
 		parseRoute: function (route) {
-			crossroads.parse(route);
+			this._crossroads.parse(route);
 		},
 
 		/**
@@ -37,7 +45,7 @@ define([
 		 * @param {Function} Page
 		 */
 		bindPage: function (Page) {
-			var route = Page.route;
+			var route = Page.createRoute(this._crossroads);
 
 			route.matched.add(function () {
 				this.emit('routeMatched', route);

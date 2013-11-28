@@ -7,9 +7,9 @@ define([
 			this.container = document.createElement('div');
 		});
 
-		suite('route', function () {
+		suite('createRoute()', function () {
 			test('static route in AbstractPage should be a noop', function () {
-				assert.isUndefined(AbstractPage.route(), 'the route is a noop function');
+				assert.isUndefined(AbstractPage.createRoute(), 'the route creator is a noop function');
 			});
 		});
 

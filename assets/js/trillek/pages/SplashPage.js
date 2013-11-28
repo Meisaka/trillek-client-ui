@@ -1,8 +1,7 @@
 define([
-	'crossroads',
 	'trillek/pages/AbstractPage',
 	'trillek/controllers/SplashPageController'
-], function (crossroads, AbstractPage, SplashPageController) {
+], function ( AbstractPage, SplashPageController) {
 	/**
 	 * Page to display after the game opens. This is used as the initial route
 	 * and could handle a loading progress bar in the future if the client
@@ -27,9 +26,12 @@ define([
 		/**
 		 * When this route is matched, this page will be instantiated.
 		 *
-		 * @type {Object}
+		 * @param {Object} crossroads The current crossroads object you should create from.
+		 * @return {Object} JS-Signal route from crossroads.
 		 */
-		route: crossroads.addRoute('/'),
+		createRoute: function (crossroads) {
+			return crossroads.addRoute('/');
+		}
 	});
 
 	return SplashPage;
