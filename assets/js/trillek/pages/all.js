@@ -1,5 +1,6 @@
 define([
 	'lodash',
+	'trillek/pages/IndexPage',
 	'trillek/pages/SplashPage',
 	'trillek/pages/HomePage'
 ], function (_) {

@@ -13,6 +13,7 @@ define([
 
 	'tests/pages/all',
 	'tests/pages/AbstractPage',
+	'tests/pages/IndexPage',
 	'tests/pages/SplashPage',
 	'tests/pages/HomePage',
 

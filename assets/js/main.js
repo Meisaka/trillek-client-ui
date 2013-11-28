@@ -19,9 +19,4 @@ require([
 	};
 
 	pageRouter.initialiseHasher();
-	pageRouter.setHash('splash');
-
-	setTimeout(function () {
-		pageRouter.setHash('home');
-	}, 1000);
 });
