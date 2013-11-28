@@ -12,15 +12,13 @@ define([
 
 		suite('#setCurrentPage()', function () {
 			test('when a page is set, the page has a container element passed to it', function () {
-				var result;
+				var spy = sinon.spy();
 				var page = new this.TestPage();
 
-				page.on('containerElementSet', function (container) {
-					result = container;
-				});
+				page.on('containerElementSet', spy);
 
 				this.pageDisplayManager.setCurrentPage(page);
-				assert.instanceOf(result, HTMLElement, 'the page was passed a HTML element');
+				assert.instanceOf(spy.args[0][0], HTMLElement, 'the page was passed a HTML element');
 			});
 		});
 	});
