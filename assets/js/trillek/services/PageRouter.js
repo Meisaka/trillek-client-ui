@@ -38,6 +38,13 @@ define([
 		},
 
 		/**
+		 * Updates the current hash value.
+		 */
+		setHash: function (hash) {
+			hasher.setHash(hash);
+		},
+
+		/**
 		 * Binds the page's route.matched signal to setCurrentPage and the
 		 * routeMatched event. After binding a page it will become the current
 		 * page when it's route is matched.

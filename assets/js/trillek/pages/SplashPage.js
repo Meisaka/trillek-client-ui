@@ -30,7 +30,7 @@ define([
 		 * @return {Object} JS-Signal route from crossroads.
 		 */
 		createRoute: function (crossroads) {
-			return crossroads.addRoute('/');
+			return crossroads.addRoute('splash');
 		}
 	});
 

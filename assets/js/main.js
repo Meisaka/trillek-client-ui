@@ -19,4 +19,5 @@ require([
 	};
 
 	pageRouter.initialiseHasher();
+	pageRouter.setHash('splash');
 });
