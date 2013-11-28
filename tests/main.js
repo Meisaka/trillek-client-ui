@@ -14,15 +14,18 @@ define([
 	'tests/pages/all',
 	'tests/pages/AbstractPage',
 	'tests/pages/SplashPage',
+	'tests/pages/HomePage',
 
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
 
 	'tests/controllers/AbstractController',
 	'tests/controllers/SplashPageController',
+	'tests/controllers/HomePageController',
 
 	'tests/views/AbstractView',
 	'tests/views/SplashPageView',
+	'tests/views/HomePageView',
 
 	'tests/models/AbstractModel'
 ], function (config) {
