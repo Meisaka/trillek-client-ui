@@ -1,6 +1,6 @@
 define([
 	'trillek/views/AbstractView',
-	'stache!templates/splashPage'
+	'stache!templates/pages/splash'
 ], function (AbstractView, splashPageTemplate) {
 	/**
 	 * @class

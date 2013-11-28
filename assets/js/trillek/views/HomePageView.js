@@ -1,6 +1,6 @@
 define([
 	'trillek/views/AbstractView',
-	'stache!templates/homePage'
+	'stache!templates/pages/home'
 ], function (AbstractView, homePageTemplate) {
 	/**
 	 * @class
