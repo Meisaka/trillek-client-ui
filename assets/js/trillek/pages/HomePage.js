@@ -27,8 +27,9 @@ define([
 		 * @param {Object} crossroads The current crossroads object you should create from.
 		 * @return {Object} JS-Signal route from crossroads.
 		 */
-		createRoute: function (crossroads) {
-			return crossroads.addRoute('home');
+		getRoute: function (crossroads) {
+			this._route = this._route || crossroads.addRoute('home');
+			return this._route;
 		}
 	});
 

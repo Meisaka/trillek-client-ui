@@ -1,6 +1,8 @@
 define([
-	'trillek/pages/AbstractPage'
-], function (AbstractPage) {
+	'trillek/pages/AbstractPage',
+	'trillek/pages/SplashPage',
+	'trillek/pages/HomePage'
+], function (AbstractPage, SplashPage, HomePage) {
 	/**
 	 * This should be the entry point into the application. It will load the
 	 * splash route and redirect to the home page after some time has passed.
@@ -13,9 +15,9 @@ define([
 		 * Displays the appropriate pages for the initial load.
 		 */
 		initialisePage: function () {
-			trillek.pageRouter.setHash('splash');
+			trillek.pageRouter.setHashUsingPage(SplashPage);
 			setTimeout(function () {
-				trillek.pageRouter.setHash('home');
+				trillek.pageRouter.setHashUsingPage(HomePage);
 			}, 1000);
 		}
 	});
@@ -27,8 +29,9 @@ define([
 		 * @param {Object} crossroads The current crossroads object you should create from.
 		 * @return {Object} JS-Signal route from crossroads.
 		 */
-		createRoute: function (crossroads) {
-			return crossroads.addRoute('');
+		getRoute: function (crossroads) {
+			this._route = this._route || crossroads.addRoute('');
+			return this._route;
 		}
 	});
 

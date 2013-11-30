@@ -38,10 +38,27 @@ define([
 		},
 
 		/**
-		 * Updates the current hash value.
+		 * Updates the current hash value using the pages interpolated route.
+		 *
+		 * @param {Function} Page
+		 * @param {Object} [replacements] Optional values to inject into the route.
 		 */
-		setHash: function (hash) {
+		setHashUsingPage: function (Page, replacements) {
+			var hash = this.getHashForPage(Page, replacements);
 			hasher.setHash(hash);
+		},
+
+		/**
+		 * Builds the hash string for a page class using an optional object of
+		 * replacements.
+		 *
+		 * @param {Function} Page
+		 * @return {String} The hash string for the page class.
+		 */
+		getHashForPage: function (Page, replacements) {
+			var route = this.getRouteFromPage(Page);
+			var hash = route.interpolate(replacements);
+			return hash;
 		},
 
 		/**
@@ -52,12 +69,22 @@ define([
 		 * @param {Function} Page
 		 */
 		bindPage: function (Page) {
-			var route = Page.createRoute(this._crossroads);
+			var route = this.getRouteFromPage(Page);
 
 			route.matched.add(function () {
 				this.emit('routeMatched', route);
 				this.setCurrentPage(Page);
 			}.bind(this));
+		},
+
+		/**
+		 * Fetches the route object from a page in the appropriate way.
+		 *
+		 * @param {Function} Page
+		 * @return {Object}
+		 */
+		getRouteFromPage: function (Page) {
+			return Page.getRoute(this._crossroads);
 		},
 
 		/**

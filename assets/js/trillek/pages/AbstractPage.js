@@ -52,7 +52,7 @@ define([
 		 * @param {Object} crossroads The current crossroads object you should create from.
 		 * @return {Object} JS-Signal route from crossroads.
 		 */
-		createRoute: _.noop
+		getRoute: _.noop
 	});
 
 	return AbstractPage;

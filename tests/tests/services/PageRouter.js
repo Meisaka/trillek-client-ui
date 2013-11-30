@@ -8,8 +8,9 @@ define([
 			this.pageRouter = new PageRouter();
 			this.TestPage = AbstractPage.subclass();
 			this.TestPage.extend({
-				createRoute: function (crossroads) {
-					return crossroads.addRoute('foo');
+				getRoute: function (crossroads) {
+					this._route = this._route || crossroads.addRoute('foo');
+					return this._route;
 				}
 			});
 		});
@@ -55,6 +56,28 @@ define([
 				var args = spy.args[0][0];
 				assert.instanceOf(args.to, OtherTestPage, 'the to property is a OtherTestPage instance');
 				assert.instanceOf(args.from, this.TestPage, 'the from property is a TestPage instance');
+			});
+		});
+
+		suite('#getHashForPage()', function () {
+			test('can get the hash of a page', function () {
+				var hash = this.pageRouter.getHashForPage(this.TestPage);
+				assert.strictEqual(hash, 'foo', 'hash was interpolated correctly');
+			});
+		});
+
+		suite('#getRouteFromPage()', function () {
+			test('can fetch a route from a page', function () {
+				var route = this.pageRouter.getRouteFromPage(this.TestPage);
+				var expected = 'foo';
+				var interpolated = route.interpolate();
+				assert.strictEqual(interpolated, expected, 'fetched the correct route');
+			});
+
+			test('can get the same route object from a page twice', function () {
+				var firstRoute = this.pageRouter.getRouteFromPage(this.TestPage);
+				var secondRoute = this.pageRouter.getRouteFromPage(this.TestPage);
+				assert.strictEqual(firstRoute, secondRoute, 'fetched the same route twice');
 			});
 		});
 	});
