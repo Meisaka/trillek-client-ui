@@ -1,4 +1,3 @@
-// source
 define([
 	'stapes'
 ], function (Stapes) {
