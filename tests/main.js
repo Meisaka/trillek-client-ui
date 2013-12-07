@@ -19,6 +19,7 @@ define([
 
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
+	'tests/services/GameBridge',
 
 	'tests/controllers/AbstractController',
 	'tests/controllers/SplashPageController',

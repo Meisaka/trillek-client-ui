@@ -2,10 +2,12 @@ require([
 	'require-config',
 	'trillek/services/PageRouter',
 	'trillek/services/PageDisplayManager',
+	'trillek/services/GameBridge',
 	'trillek/pages/all'
-], function (requireConfig, PageRouter, PageDisplayManager, allPages) {
+], function (requireConfig, PageRouter, PageDisplayManager, GameBridge, allPages) {
 	var pageRouter = new PageRouter();
 	var pageDisplayManager = new PageDisplayManager(pageRouter);
+	var gameBridge = new GameBridge();
 	var allPagesLength = allPages.length;
 	var i;
 
@@ -15,7 +17,8 @@ require([
 
 	window.trillek = {
 		pageRouter: pageRouter,
-		pageDisplayManager: pageDisplayManager
+		pageDisplayManager: pageDisplayManager,
+		gameBridge: gameBridge
 	};
 
 	pageRouter.initialiseHasher();
