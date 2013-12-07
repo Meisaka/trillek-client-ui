@@ -5,6 +5,10 @@
 @include normalize;
 
 $splash-page-image: 'raw/splash-logo.png';
-$splash-page-background: #CCCCCC;
+$default-page-container-background: #CCCCCC;
+
+$button-color: #FFFFFF;
+$button-background: #999999;
+$button-hover-background: #555555;
 
 @import 'modules/all';

@@ -1,9 +1,11 @@
 body,
 .trillek-page-container,
-.splash-page-container {
+.splash-page-container,
+.home-page-container {
 	@extend %fill-parent;
 }
 
-.splash-page-container {
-	background: $splash-page-background;
+.splash-page-container,
+.home-page-container {
+	background: $default-page-container-background;
 }

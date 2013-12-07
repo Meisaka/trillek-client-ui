@@ -1,0 +1,12 @@
+%menu {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-menu {
+	@extend %menu;
+	margin: 40px auto;
+	width: 30%;
+}
