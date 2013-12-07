@@ -4,6 +4,7 @@
 
 @include normalize;
 
-$splash-image: 'raw/splash.png';
+$splash-page-image: 'raw/splash-logo.png';
+$splash-page-background: #CCCCCC;
 
 @import 'modules/all';

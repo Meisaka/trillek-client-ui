@@ -1,5 +1,5 @@
 .splash-page-image {
 	@extend %absolute-center;
 	width: 80%;
-	max-width: image-width($splash-image);
+	max-width: image-width($splash-page-image);
 }

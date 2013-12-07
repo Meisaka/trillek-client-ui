@@ -1,7 +1,9 @@
-body {
+body,
+.trillek-page-container,
+.splash-page-container {
 	@extend %fill-parent;
 }
 
-.trillek-page-container {
-	@extend %fill-parent;
+.splash-page-container {
+	background: $splash-page-background;
 }
