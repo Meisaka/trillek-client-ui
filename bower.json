@@ -9,10 +9,10 @@
     "stapes": "~0.8.0",
     "hasher": "~1.2.0",
     "qwery": "~3.4.1",
-    "lodash": "~2.3.0"
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
-    "mocha": "~1.14.0",
+    "mocha": "~1.15.1",
     "almond": "~0.2.6",
     "chai": "~1.8.1",
     "sinon": "http://sinonjs.org/releases/sinon-1.7.3.js"
