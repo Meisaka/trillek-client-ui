@@ -12,7 +12,15 @@ define([
 		 */
 		constructor: function () {
 			this._view = new HomePageView();
-			this._view.on('playClicked', trillek.gameBridge.play);
+			this._view.on('playClicked', this.onPlayClicked.bind(this));
+		},
+
+		/**
+		 * Initiates the play sequence and loads the in game page.
+		 */
+		onPlayClicked: function () {
+			trillek.gameBridge.play();
+			this.emit('playClicked');
 		}
 	});
 

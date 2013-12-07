@@ -1,7 +1,8 @@
 define([
 	'trillek/pages/AbstractPage',
-	'trillek/controllers/HomePageController'
-], function (AbstractPage, HomePageController) {
+	'trillek/controllers/HomePageController',
+	'trillek/pages/GamePage'
+], function (AbstractPage, HomePageController, GamePage) {
 	/**
 	 * Initial page to load after the splash. This will act as the home or hub
 	 * page where the user will branch out from.
@@ -17,6 +18,15 @@ define([
 			this._controller = new HomePageController();
 			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
 			this._controller.renderAll();
+
+			this._controller.on('playClicked', this.onPlayClicked.bind(this));
+		},
+
+		/**
+		 * When play is clicked we should redirect to the in game page.
+		 */
+		onPlayClicked: function () {
+			trillek.pageRouter.setHashUsingPage(GamePage);
 		}
 	});
 
