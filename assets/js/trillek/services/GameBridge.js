@@ -8,6 +8,8 @@ define([
 	 * @class
 	 */
 	var GameBridge = Stapes.subclass(/** @lends GameBridge.prototype */ {
+		play: function () {
+		}
 	});
 
 	return GameBridge;

@@ -12,6 +12,7 @@ define([
 		 */
 		constructor: function () {
 			this._view = new HomePageView();
+			this._view.on('playClicked', trillek.gameBridge.play);
 		}
 	});
 

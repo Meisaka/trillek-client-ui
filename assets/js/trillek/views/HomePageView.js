@@ -1,7 +1,8 @@
 define([
+	'qwery',
 	'trillek/views/AbstractView',
 	'stache!templates/pages/home'
-], function (AbstractView, homePageTemplate) {
+], function (qwery, AbstractView, homePageTemplate) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -14,6 +15,16 @@ define([
 		 */
 		render: function () {
 			return homePageTemplate();
+		},
+
+		/**
+		 * Attaches all event listeners to the newly created DOM elements. This
+		 * is called after render has finished and the new HTML has been
+		 * injected into the page.
+		 */
+		addEventListeners: function () {
+			var playButton = qwery('#play-button')[0];
+			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
 		}
 	});
 

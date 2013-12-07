@@ -16,7 +16,16 @@ define([
 		 * @param {Object} [model] Optional source data object to be used when rendering the view.
 		 * @return {String} String representation of the view based on the model.
 		 */
-		render: _.noop
+		render: _.noop,
+
+		/**
+		 * Attaches all event listeners to the newly created DOM elements. This
+		 * is called after render has finished and the new HTML has been
+		 * injected into the page.
+		 *
+		 * @abstract
+		 */
+		addEventListeners: _.noop
 	});
 
 	return AbstractView;

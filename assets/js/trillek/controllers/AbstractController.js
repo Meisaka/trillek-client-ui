@@ -11,6 +11,9 @@ define([
 		 * out through the renderComplete event.
 		 *
 		 * Passes the models object (this._models) to the main view on render.
+		 *
+		 * After the views have been rendered, it will execute their event
+		 * binding methods.
 		 */
 		renderAll: function () {
 			var models = this._models;
@@ -19,9 +22,9 @@ define([
 
 			if (view) {
 				result = view.render(models);
+				this.emit('renderComplete', result);
+				view.addEventListeners();
 			}
-
-			this.emit('renderComplete', result);
 		}
 	});
 
