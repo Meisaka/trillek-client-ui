@@ -1,9 +1,10 @@
 define([
+	'lodash',
 	'qwery',
 	'trillek/views/AbstractView',
 	'tmpl!pages/home',
 	'i18n!trillek/nls/buttons'
-], function (qwery, AbstractView, homePageTemplate, buttons) {
+], function (_, qwery, AbstractView, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -28,7 +29,7 @@ define([
 		 * injected into the page.
 		 */
 		addEventListeners: function () {
-			var playButton = qwery('#play-button')[0];
+			var playButton = _.first(qwery('#play-button'));
 			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
 		}
 	});
