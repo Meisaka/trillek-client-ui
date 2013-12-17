@@ -9,7 +9,8 @@
     "stapes": "~0.8.0",
     "hasher": "~1.2.0",
     "qwery": "~3.4.1",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "requirejs-i18n": "~2.0.4"
   },
   "devDependencies": {
     "mocha": "~1.15.1",
