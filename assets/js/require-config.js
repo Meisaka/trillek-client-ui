@@ -1,6 +1,7 @@
 require.config({
 	baseUrl: './assets/js',
 	paths: {
+		almond: '../../bower_components/almond/almond',
 		text: '../../bower_components/requirejs-text/text',
 		i18n: '../../bower_components/requirejs-i18n/i18n',
 		stapes: '../../bower_components/stapes/stapes',
@@ -12,6 +13,6 @@ require.config({
 		tmpl: '../../bower_components/lodash-template-loader/loader'
 	},
 	lodashLoader: {
-		root: '../assets/templates'
+		root: './assets/templates'
 	}
 });

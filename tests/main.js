@@ -2,6 +2,9 @@ require.config({
 	baseUrl: './',
 	paths: {
 		trillek: '../assets/js/trillek'
+	},
+	lodashLoader: {
+		root: '../assets/templates'
 	}
 });
 
