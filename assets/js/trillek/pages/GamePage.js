@@ -15,7 +15,7 @@ define([
 		initialisePage: function () {
 			this._controller = new GamePageController();
 			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
-			this._controller.renderAll();
+			this._controller.renderView();
 		}
 	});
 
