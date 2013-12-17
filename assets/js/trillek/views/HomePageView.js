@@ -1,8 +1,9 @@
 define([
 	'qwery',
 	'trillek/views/AbstractView',
-	'stache!templates/pages/home'
-], function (qwery, AbstractView, homePageTemplate) {
+	'stache!templates/pages/home',
+	'i18n!trillek/nls/buttons'
+], function (qwery, AbstractView, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -14,7 +15,11 @@ define([
 		 * @return {String} Home page HTML to display.
 		 */
 		render: function () {
-			return homePageTemplate();
+			return homePageTemplate({
+				i18n: {
+					buttons: buttons
+				}
+			});
 		},
 
 		/**
