@@ -1,6 +1,7 @@
 require.config({
+	baseUrl: './',
 	paths: {
-		trillek: '../assets/js/trillek',
+		trillek: '../assets/js/trillek'
 	}
 });
 
@@ -8,9 +9,7 @@ mocha.setup('tdd');
 mocha.reporter('html');
 window.assert = chai.assert;
 
-define([
-	'../assets/js/require-config',
-
+require([
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
 	'tests/services/GameBridge',

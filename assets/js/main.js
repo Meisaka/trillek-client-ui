@@ -1,10 +1,9 @@
 require([
-	'require-config',
 	'trillek/services/PageRouter',
 	'trillek/services/PageDisplayManager',
 	'trillek/services/GameBridge',
 	'trillek/pages/all'
-], function (requireConfig, PageRouter, PageDisplayManager, GameBridge, allPages) {
+], function (PageRouter, PageDisplayManager, GameBridge, allPages) {
 	var pageRouter = new PageRouter();
 	var pageDisplayManager = new PageDisplayManager(pageRouter);
 	var gameBridge = new GameBridge();
