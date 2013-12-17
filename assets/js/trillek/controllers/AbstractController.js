@@ -2,7 +2,7 @@ define([
 	'stapes'
 ], function (Stapes) {
 	/**
-	 * @class
+	 * @class AbstractController
 	 */
 	var AbstractController = Stapes.subclass(/** @lends AbstractController.prototype */ {
 		/**

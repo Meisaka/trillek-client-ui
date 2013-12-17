@@ -8,7 +8,7 @@ define([
 	 * requires it. Until then, it's just a familiar welcome screen for the
 	 * user.
 	 *
-	 * @class
+	 * @class SplashPage
 	 * @augments AbstractPage
 	 */
 	var SplashPage = AbstractPage.subclass(/** @lends SplashPage.prototype */ {

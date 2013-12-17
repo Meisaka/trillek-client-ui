@@ -3,14 +3,11 @@ define([
 	'crossroads',
 	'hasher'
 ], function (Stapes, crossroads, hasher) {
-	/**
-	 * Thin wrapper around the crossroads and hasher libraries. Allows for easy
-	 * initialisation and mapping of pages to routes.
-	 *
-	 * @class
-	 */
 	var PageRouter = Stapes.subclass(/** @lends PageRouter.prototype */ {
 		/**
+		 * Thin wrapper around the crossroads and hasher libraries. Allows for easy
+		 * initialisation and mapping of pages to routes.
+		 *
 		 * @constructs
 		 */
 		constructor: function () {

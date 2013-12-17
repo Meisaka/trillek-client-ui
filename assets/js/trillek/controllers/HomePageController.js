@@ -3,13 +3,10 @@ define([
 	'trillek/views/HomePageView',
 	'trillek/services'
 ], function (AbstractController, HomePageView, services) {
-	/**
-	 * @class
-	 * @augments AbstractController
-	 */
 	var HomePageController = AbstractController.subclass(/** @lends HomePageController.prototype */ {
 		/**
 		 * @constructs
+		 * @augments AbstractController
 		 */
 		constructor: function () {
 			this._view = new HomePageView();

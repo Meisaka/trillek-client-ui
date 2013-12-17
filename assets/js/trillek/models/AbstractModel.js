@@ -2,7 +2,7 @@ define([
 	'stapes'
 ], function (Stapes) {
 	/**
-	 * @class
+	 * @class AbstractModel
 	 */
 	var AbstractModel = Stapes.subclass(/** @lends AbstractModel.prototype */ {
 	});

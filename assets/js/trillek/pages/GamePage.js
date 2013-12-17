@@ -5,7 +5,7 @@ define([
 	/**
 	 * Transparent page that renders the game underneath it.
 	 *
-	 * @class
+	 * @class GamePage
 	 * @augments AbstractPage
 	 */
 	var GamePage = AbstractPage.subclass(/** @lends GamePage.prototype */ {

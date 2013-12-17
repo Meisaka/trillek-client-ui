@@ -8,7 +8,7 @@ define([
 	 * Initial page to load after the splash. This will act as the home or hub
 	 * page where the user will branch out from.
 	 *
-	 * @class
+	 * @class HomePage
 	 * @augments AbstractPage
 	 */
 	var HomePage = AbstractPage.subclass(/** @lends HomePage.prototype */ {

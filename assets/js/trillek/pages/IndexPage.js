@@ -8,7 +8,7 @@ define([
 	 * This should be the entry point into the application. It will load the
 	 * splash route and redirect to the home page after some time has passed.
 	 *
-	 * @class
+	 * @class IndexPage
 	 * @augments AbstractPage
 	 */
 	var IndexPage = AbstractPage.subclass(/** @lends IndexPage.prototype */ {

@@ -10,7 +10,7 @@ define([
 	 * PageRouter will use this to display your pages when your route is
 	 * matched.
 	 *
-	 * @class
+	 * @class AbstractPage
 	 */
 	var AbstractPage = Stapes.subclass(/** @lends AbstractPage.prototype */ {
 		/**
