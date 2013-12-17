@@ -9,7 +9,7 @@ define(function () {
 			signals: '../../bower_components/js-signals/dist/signals',
 			qwery: '../../bower_components/qwery/qwery',
 			lodash: '../../bower_components/lodash/dist/lodash',
-			tmpl: '../../bower_components/lodash-template-loader/loader',
+			tmpl: '../../bower_components/lodash-template-loader/loader'
 		},
 		lodashLoader: {
 			root: 'assets/templates'
