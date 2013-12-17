@@ -1,7 +1,6 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'stapes'
+], function (Stapes) {
 	/**
 	 * @class
 	 */
