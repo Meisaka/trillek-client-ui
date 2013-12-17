@@ -11,9 +11,6 @@ define(function () {
 			lodash: '../../bower_components/lodash/dist/lodash',
 			tmpl: '../../bower_components/lodash-template-loader/loader',
 		},
-		stache: {
-			extension: '.mustache'
-		},
 		lodashLoader: {
 			root: 'assets/templates'
 		}
