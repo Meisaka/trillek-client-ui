@@ -1,7 +1,7 @@
 define([
 	'qwery',
 	'trillek/views/AbstractView',
-	'stache!templates/pages/home',
+	'tmpl!pages/home',
 	'i18n!trillek/nls/buttons'
 ], function (qwery, AbstractView, homePageTemplate, buttons) {
 	/**
