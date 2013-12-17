@@ -78,6 +78,10 @@ All built files are stored within `./build/assets/`, once the build is complete 
 
 If you have a build up of build artefacts, such as images that are no longer found within the source, you can remove them by executing `grunt clean`. This will remove the entirety of `./build/assets`.
 
+## Documentation
+
+When you execute `grunt` or `grunt jsdoc` the inline [JSDoc][] comments within the source code will be parsed and turned into HTML. You can then view that documentation by loading the pages stored within the `doc` directory.
+
 ## Contributing
 
 ### JavaScript
