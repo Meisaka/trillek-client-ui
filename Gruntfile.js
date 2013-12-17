@@ -46,7 +46,10 @@ module.exports = function (grunt) {
 					mainConfigFile: './assets/js/require-config.js',
 					out: './build/assets/js/main.min.js',
 					optimize: 'uglify2',
-					wrap: true
+					wrap: true,
+					uglify2: {
+						mangle: true
+					}
 				}
 			}
 		},
