@@ -21,9 +21,10 @@ define([
 
 			if (view) {
 				result = view.render(models);
-				this.emit('renderComplete', result);
 				view.addEventListeners();
 			}
+
+			this.emit('renderComplete', result);
 		}
 	});
 
