@@ -1,24 +1,13 @@
 require([
-	'trillek/services/PageRouter',
-	'trillek/services/PageDisplayManager',
-	'trillek/services/GameBridge',
+	'trillek/services',
 	'trillek/pages/all'
-], function (PageRouter, PageDisplayManager, GameBridge, allPages) {
-	var pageRouter = new PageRouter();
-	var pageDisplayManager = new PageDisplayManager(pageRouter);
-	var gameBridge = new GameBridge();
+], function (services, allPages) {
 	var allPagesLength = allPages.length;
 	var i;
 
 	for (i = 0; i < allPagesLength; i++) {
-		pageRouter.bindPage(allPages[i]);
+		services.pageRouter.bindPage(allPages[i]);
 	}
 
-	window.trillek = {
-		pageRouter: pageRouter,
-		pageDisplayManager: pageDisplayManager,
-		gameBridge: gameBridge
-	};
-
-	pageRouter.initialiseHasher();
+	services.pageRouter.initialiseHasher();
 });

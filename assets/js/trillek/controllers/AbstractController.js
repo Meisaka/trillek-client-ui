@@ -15,16 +15,19 @@ define([
 		 * binding methods.
 		 */
 		renderView: function () {
+			var renderCompleteEvent = 'renderComplete';
 			var models = this._models;
 			var view = this._view;
 			var result;
 
 			if (view) {
 				result = view.render(models);
+				this.emit(renderCompleteEvent, result);
 				view.addEventListeners();
 			}
-
-			this.emit('renderComplete', result);
+			else {
+				this.emit(renderCompleteEvent);
+			}
 		}
 	});
 

@@ -13,6 +13,7 @@ mocha.reporter('html');
 window.assert = chai.assert;
 
 require([
+	'tests/services',
 	'tests/services/PageRouter',
 	'tests/services/PageDisplayManager',
 	'tests/services/GameBridge',

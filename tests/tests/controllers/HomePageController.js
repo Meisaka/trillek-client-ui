@@ -1,6 +1,7 @@
 define([
-	'trillek/controllers/HomePageController'
-], function (HomePageController) {
+	'trillek/controllers/HomePageController',
+	'trillek/services'
+], function (HomePageController, services) {
 	suite('controllers/HomePageController', function () {
 		setup(function () {
 			this.controller = new HomePageController();
@@ -11,16 +12,11 @@ define([
 				this.playClickedSpy = sinon.spy();
 				this.controller.on('playClicked', this.playClickedSpy);
 
-				this.playSpy = sinon.spy();
-				window.trillek = {
-					gameBridge: {
-						play: this.playSpy
-					}
-				};
+				this.playSpy = sinon.spy(services.gameBridge, 'play');
 			});
 
 			teardown(function () {
-				delete window.trillek;
+				this.playSpy.restore();
 			});
 
 			test('calls play on the game bridge', function () {

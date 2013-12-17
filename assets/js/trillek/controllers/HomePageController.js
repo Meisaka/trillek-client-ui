@@ -1,7 +1,8 @@
 define([
 	'trillek/controllers/AbstractController',
-	'trillek/views/HomePageView'
-], function (AbstractController, HomePageView) {
+	'trillek/views/HomePageView',
+	'trillek/services'
+], function (AbstractController, HomePageView, services) {
 	/**
 	 * @class
 	 * @augments AbstractController
@@ -19,7 +20,7 @@ define([
 		 * Initiates the play sequence and loads the in game page.
 		 */
 		onPlayClicked: function () {
-			trillek.gameBridge.play();
+			services.gameBridge.play();
 			this.emit('playClicked');
 		}
 	});
