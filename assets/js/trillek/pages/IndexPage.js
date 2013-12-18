@@ -19,7 +19,7 @@ define([
 			services.pageRouter.setHashUsingPage(SplashPage);
 			setTimeout(function () {
 				services.pageRouter.setHashUsingPage(HomePage);
-			}, 1000);
+			}, 3000);
 		}
 	});
 

@@ -9,3 +9,8 @@ body,
 .home-page-container {
 	background: $default-page-container-background;
 }
+
+.splash-page-container {
+	@include box-shadow($splash-page-box-shadow);
+	@include animation($splash-page-intro-animation);
+}
