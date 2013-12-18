@@ -29,5 +29,23 @@ define([
 				assert.isTrue(this.playClickedSpy.called);
 			});
 		});
+
+		suite('#onExitClicked()', function () {
+			setup(function () {
+				this.exitClickedSpy = sinon.spy();
+				this.controller.on('exitClicked', this.exitClickedSpy);
+
+				this.exitSpy = sinon.spy(services.gameBridge, 'exit');
+			});
+
+			teardown(function () {
+				this.exitSpy.restore();
+			});
+
+			test('calls exit on the game bridge', function () {
+				this.controller.onExitClicked();
+				assert.isTrue(this.exitSpy.called);
+			});
+		});
 	});
 });

@@ -11,6 +11,7 @@ define([
 		constructor: function () {
 			this._view = new HomePageView();
 			this._view.on('playClicked', this.onPlayClicked.bind(this));
+			this._view.on('exitClicked', this.onExitClicked.bind(this));
 		},
 
 		/**
@@ -19,6 +20,13 @@ define([
 		onPlayClicked: function () {
 			services.gameBridge.play();
 			this.emit('playClicked');
+		},
+
+		/**
+		 * Exits the application.
+		 */
+		onExitClicked: function () {
+			services.gameBridge.exit();
 		}
 	});
 

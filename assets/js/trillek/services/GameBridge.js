@@ -23,6 +23,12 @@ define([
 			if (this.isGameObjectPresent()) {
 				this._gameObject.play();
 			}
+		},
+
+		exit: function () {
+			if (this.isGameObjectPresent()) {
+				this._gameObject.exit();
+			}
 		}
 	});
 

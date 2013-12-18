@@ -1,5 +1,6 @@
 define({
 	root: {
-		start: "Start"
+		start: "Start",
+		exit: "Exit"
 	}
 });

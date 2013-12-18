@@ -30,7 +30,10 @@ define([
 		 */
 		addEventListeners: function () {
 			var playButton = _.first(qwery('#play-button'));
+			var exitButton = _.first(qwery('#exit-button'));
+
 			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
+			exitButton.addEventListener('click', this.emit.bind(this, 'exitClicked'));
 		}
 	});
 

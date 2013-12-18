@@ -6,8 +6,10 @@ define([
 			this.bridge = new GameBridge();
 
 			this.playSpy = sinon.spy();
+			this.exitSpy = sinon.spy();
 			this.gameStub = window.game = {
-				play: this.playSpy
+				play: this.playSpy,
+				exit: this.exitSpy
 			};
 			this.bridgeWithObject = new GameBridge();
 		});
@@ -30,6 +32,13 @@ define([
 			test('calls play on the game object', function () {
 				this.bridgeWithObject.play();
 				assert.isTrue(this.playSpy.called);
+			});
+		});
+
+		suite('#exit()', function () {
+			test('calls exit on the game object', function () {
+				this.bridgeWithObject.exit();
+				assert.isTrue(this.exitSpy.called);
 			});
 		});
 	});
