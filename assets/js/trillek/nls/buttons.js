@@ -1,6 +1,7 @@
 define({
 	root: {
-		start: "Start",
-		exit: "Exit"
-	}
+		start: 'Start',
+		exit: 'Exit'
+	},
+	'pl-pl': true
 });
