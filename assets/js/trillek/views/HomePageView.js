@@ -1,10 +1,9 @@
 define([
-	'lodash',
-	'qwery',
 	'trillek/views/AbstractView',
+	'trillek/services',
 	'tmpl!pages/home',
 	'i18n!trillek/nls/buttons'
-], function (_, qwery, AbstractView, homePageTemplate, buttons) {
+], function (AbstractView, services, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -29,8 +28,8 @@ define([
 		 * injected into the page.
 		 */
 		addEventListeners: function () {
-			var playButton = _.first(qwery('#play-button'));
-			var exitButton = _.first(qwery('#exit-button'));
+			var playButton = services.selector.find('#play-button');
+			var exitButton = services.selector.find('#exit-button');
 
 			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
 			exitButton.addEventListener('click', this.emit.bind(this, 'exitClicked'));
