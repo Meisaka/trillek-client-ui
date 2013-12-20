@@ -1,8 +1,9 @@
 define([
 	'trillek/controllers/AbstractController',
+	'lodash',
 	'trillek/views/HomePageView',
 	'trillek/services'
-], function (AbstractController, HomePageView, services) {
+], function (AbstractController, _, HomePageView, services) {
 	var HomePageController = AbstractController.subclass(/** @lends HomePageController.prototype */ {
 		/**
 		 * @constructs
@@ -10,8 +11,8 @@ define([
 		 */
 		constructor: function () {
 			this._view = new HomePageView();
-			this._view.on('playClicked', this._onPlayClicked.bind(this));
-			this._view.on('exitClicked', this._onExitClicked.bind(this));
+			this._view.on('playClicked', _.bind(this._onPlayClicked, this));
+			this._view.on('exitClicked', _.bind(this._onExitClicked, this));
 		},
 
 		/**

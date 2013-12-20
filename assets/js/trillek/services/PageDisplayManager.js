@@ -1,6 +1,7 @@
 define([
-	'stapes'
-], function (Stapes) {
+	'stapes',
+	'lodash'
+], function (Stapes, _) {
 	var PageDisplayManager = Stapes.subclass(/** @lends PageDisplayManager.prototype */ {
 		/**
 		 * Listens to events from the provided PageRouter instance. Where
@@ -19,9 +20,9 @@ define([
 		 */
 		constructor: function (pageRouter) {
 			this._pageRouter = pageRouter;
-			pageRouter.on('pageSet', function (payload) {
+			pageRouter.on('pageSet', _.bind(function (payload) {
 				this.setCurrentPage(payload.to);
-			}.bind(this));
+			}, this));
 
 			this._containerElement = document.createElement('div');
 			this._containerElement.classList.add('trillek-page-container');

@@ -1,9 +1,10 @@
 define([
 	'trillek/views/AbstractView',
+	'lodash',
 	'trillek/services',
 	'tmpl!pages/home',
 	'i18n!trillek/nls/buttons'
-], function (AbstractView, services, homePageTemplate, buttons) {
+], function (AbstractView, _, services, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -31,8 +32,8 @@ define([
 			var playButton = services.selector.find('#play-button');
 			var exitButton = services.selector.find('#exit-button');
 
-			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
-			exitButton.addEventListener('click', this.emit.bind(this, 'exitClicked'));
+			playButton.addEventListener('click', _.bind(this.emit, this, 'playClicked'));
+			exitButton.addEventListener('click', _.bind(this.emit, this, 'exitClicked'));
 		}
 	});
 

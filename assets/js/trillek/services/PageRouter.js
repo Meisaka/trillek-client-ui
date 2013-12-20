@@ -1,8 +1,9 @@
 define([
 	'stapes',
+	'lodash',
 	'crossroads',
 	'hasher'
-], function (Stapes, crossroads, hasher) {
+], function (Stapes, _, crossroads, hasher) {
 	var PageRouter = Stapes.subclass(/** @lends PageRouter.prototype */ {
 		/**
 		 * Thin wrapper around the crossroads and hasher libraries. Allows for easy
@@ -19,7 +20,7 @@ define([
 		 * initialisation, the hasher will check the hash for the first time.
 		 */
 		initialiseHasher: function () {
-			var parseRoute = this.parseRoute.bind(this);
+			var parseRoute = _.bind(this.parseRoute, this);
 			hasher.initialized.add(parseRoute);
 			hasher.changed.add(parseRoute);
 			hasher.init();
@@ -68,10 +69,10 @@ define([
 		bindPage: function (Page) {
 			var route = this.getRouteFromPage(Page);
 
-			route.matched.add(function () {
+			route.matched.add(_.bind(function () {
 				this.emit('routeMatched', route);
 				this.setCurrentPage(Page);
-			}.bind(this));
+			}, this));
 		},
 
 		/**

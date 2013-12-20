@@ -1,9 +1,10 @@
 define([
 	'trillek/pages/AbstractPage',
+	'lodash',
 	'trillek/controllers/HomePageController',
 	'trillek/pages/GamePage',
 	'trillek/services'
-], function (AbstractPage, HomePageController, GamePage, services) {
+], function (AbstractPage, _, HomePageController, GamePage, services) {
 	/**
 	 * Initial page to load after the splash. This will act as the home or hub
 	 * page where the user will branch out from.
@@ -17,10 +18,10 @@ define([
 		 */
 		initialisePage: function () {
 			this._controller = new HomePageController();
-			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
+			this._controller.on('renderComplete', _.bind(this.setContainerElementHTML, this));
 			this._controller.renderView();
 
-			this._controller.on('playClicked', this._onPlayClicked.bind(this));
+			this._controller.on('playClicked', _.bind(this._onPlayClicked, this));
 		},
 
 		/**
