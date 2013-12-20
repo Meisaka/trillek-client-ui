@@ -20,13 +20,15 @@ define([
 			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
 			this._controller.renderView();
 
-			this._controller.on('playClicked', this.onPlayClicked.bind(this));
+			this._controller.on('playClicked', this._onPlayClicked.bind(this));
 		},
 
 		/**
 		 * When play is clicked we should redirect to the in game page.
+		 *
+		 * @private
 		 */
-		onPlayClicked: function () {
+		_onPlayClicked: function () {
 			services.pageRouter.setHashUsingPage(GamePage);
 		}
 	});

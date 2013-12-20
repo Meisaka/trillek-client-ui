@@ -10,22 +10,26 @@ define([
 		 */
 		constructor: function () {
 			this._view = new HomePageView();
-			this._view.on('playClicked', this.onPlayClicked.bind(this));
-			this._view.on('exitClicked', this.onExitClicked.bind(this));
+			this._view.on('playClicked', this._onPlayClicked.bind(this));
+			this._view.on('exitClicked', this._onExitClicked.bind(this));
 		},
 
 		/**
 		 * Initiates the play sequence and loads the in game page.
+		 *
+		 * @private
 		 */
-		onPlayClicked: function () {
+		_onPlayClicked: function () {
 			services.gameBridge.play();
 			this.emit('playClicked');
 		},
 
 		/**
 		 * Exits the application.
+		 *
+		 * @private
 		 */
-		onExitClicked: function () {
+		_onExitClicked: function () {
 			services.gameBridge.exit();
 		}
 	});

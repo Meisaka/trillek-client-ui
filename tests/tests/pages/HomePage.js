@@ -8,7 +8,7 @@ define([
 			this.page = new HomePage();
 		});
 
-		suite('#onPlayClicked()', function () {
+		suite('#_onPlayClicked()', function () {
 			setup(function () {
 				this.hashSpy = sinon.spy(services.pageRouter, 'setHashUsingPage');
 			});
@@ -18,7 +18,7 @@ define([
 			});
 
 			test('attempts to set the hash to GamePage', function () {
-				this.page.onPlayClicked();
+				this.page._onPlayClicked();
 				assert.isTrue(this.hashSpy.calledWith(GamePage));
 			});
 		});

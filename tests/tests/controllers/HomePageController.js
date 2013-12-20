@@ -7,7 +7,7 @@ define([
 			this.controller = new HomePageController();
 		});
 
-		suite('#onPlayClicked()', function () {
+		suite('#_onPlayClicked()', function () {
 			setup(function () {
 				this.playClickedSpy = sinon.spy();
 				this.controller.on('playClicked', this.playClickedSpy);
@@ -20,17 +20,17 @@ define([
 			});
 
 			test('calls play on the game bridge', function () {
-				this.controller.onPlayClicked();
+				this.controller._onPlayClicked();
 				assert.isTrue(this.playSpy.called);
 			});
 
 			test('emits playClicked', function () {
-				this.controller.onPlayClicked();
+				this.controller._onPlayClicked();
 				assert.isTrue(this.playClickedSpy.called);
 			});
 		});
 
-		suite('#onExitClicked()', function () {
+		suite('#_onExitClicked()', function () {
 			setup(function () {
 				this.exitClickedSpy = sinon.spy();
 				this.controller.on('exitClicked', this.exitClickedSpy);
@@ -43,7 +43,7 @@ define([
 			});
 
 			test('calls exit on the game bridge', function () {
-				this.controller.onExitClicked();
+				this.controller._onExitClicked();
 				assert.isTrue(this.exitSpy.called);
 			});
 		});
