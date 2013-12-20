@@ -1,26 +1,37 @@
 define([
+	'lodash',
 	'trillek/controllers/AbstractController',
-	'trillek/views/HomePageView'
-], function (AbstractController, HomePageView) {
-	/**
-	 * @class
-	 * @augments AbstractController
-	 */
+	'trillek/views/HomePageView',
+	'trillek/services'
+], function (_, AbstractController, HomePageView, services) {
 	var HomePageController = AbstractController.subclass(/** @lends HomePageController.prototype */ {
 		/**
 		 * @constructs
+		 * @augments AbstractController
 		 */
 		constructor: function () {
 			this._view = new HomePageView();
-			this._view.on('playClicked', this.onPlayClicked.bind(this));
+			this._view.on('playClicked', _.bind(this._onPlayClicked, this));
+			this._view.on('exitClicked', _.bind(this._onExitClicked, this));
 		},
 
 		/**
 		 * Initiates the play sequence and loads the in game page.
+		 *
+		 * @private
 		 */
-		onPlayClicked: function () {
-			trillek.gameBridge.play();
+		_onPlayClicked: function () {
+			services.gameBridge.play();
 			this.emit('playClicked');
+		},
+
+		/**
+		 * Exits the application.
+		 *
+		 * @private
+		 */
+		_onExitClicked: function () {
+			services.gameBridge.exit();
 		}
 	});
 

@@ -1,29 +1,32 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'stapes'
+], function (Stapes) {
 	/**
-	 * @class
+	 * @class AbstractController
 	 */
 	var AbstractController = Stapes.subclass(/** @lends AbstractController.prototype */ {
 		/**
 		 * Renders the main view stored within the controller. Sends the result
 		 * out through the renderComplete event.
 		 *
-		 * Passes the models object (this._models) to the main view on render.
+		 * Passes the models object (this._models) to the view on render.
 		 *
-		 * After the views have been rendered, it will execute their event
+		 * After the view has been rendered, it will execute their event
 		 * binding methods.
 		 */
-		renderAll: function () {
+		renderView: function () {
+			var renderCompleteEvent = 'renderComplete';
 			var models = this._models;
 			var view = this._view;
 			var result;
 
 			if (view) {
 				result = view.render(models);
-				this.emit('renderComplete', result);
+				this.emit(renderCompleteEvent, result);
 				view.addEventListeners();
+			}
+			else {
+				this.emit(renderCompleteEvent);
 			}
 		}
 	});

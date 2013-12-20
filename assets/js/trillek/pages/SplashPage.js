@@ -1,14 +1,15 @@
 define([
+	'lodash',
 	'trillek/pages/AbstractPage',
 	'trillek/controllers/SplashPageController'
-], function ( AbstractPage, SplashPageController) {
+], function (_, AbstractPage, SplashPageController) {
 	/**
 	 * Page to display after the game opens. This is used as the initial route
 	 * and could handle a loading progress bar in the future if the client
 	 * requires it. Until then, it's just a familiar welcome screen for the
 	 * user.
 	 *
-	 * @class
+	 * @class SplashPage
 	 * @augments AbstractPage
 	 */
 	var SplashPage = AbstractPage.subclass(/** @lends SplashPage.prototype */ {
@@ -17,8 +18,8 @@ define([
 		 */
 		initialisePage: function () {
 			this._controller = new SplashPageController();
-			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
-			this._controller.renderAll();
+			this._controller.on('renderComplete', _.bind(this.setContainerElementHTML, this));
+			this._controller.renderView();
 		}
 	});
 

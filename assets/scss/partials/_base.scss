@@ -4,8 +4,11 @@
 
 @include normalize;
 
-$splash-page-image: 'raw/splash-logo.png';
 $default-page-container-background: #CCCCCC;
+
+$splash-page-intro-animation: fade-in 1.5s;
+$splash-page-box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.5);
+$splash-page-image: 'raw/splash-logo.png';
 
 $button-color: #FFFFFF;
 $button-background: #999999;

@@ -1,8 +1,10 @@
 define([
-	'qwery',
+	'lodash',
 	'trillek/views/AbstractView',
-	'stache!templates/pages/home'
-], function (qwery, AbstractView, homePageTemplate) {
+	'trillek/services',
+	'tmpl!pages/home',
+	'i18n!trillek/nls/buttons'
+], function (_, AbstractView, services, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView
@@ -14,7 +16,11 @@ define([
 		 * @return {String} Home page HTML to display.
 		 */
 		render: function () {
-			return homePageTemplate();
+			return homePageTemplate({
+				i18n: {
+					buttons: buttons
+				}
+			});
 		},
 
 		/**
@@ -23,8 +29,11 @@ define([
 		 * injected into the page.
 		 */
 		addEventListeners: function () {
-			var playButton = qwery('#play-button')[0];
-			playButton.addEventListener('click', this.emit.bind(this, 'playClicked'));
+			var playButton = services.selector.find('#play-button');
+			var exitButton = services.selector.find('#exit-button');
+
+			playButton.addEventListener('click', _.bind(this.emit, this, 'playClicked'));
+			exitButton.addEventListener('click', _.bind(this.emit, this, 'exitClicked'));
 		}
 	});
 

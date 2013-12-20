@@ -1,0 +1,11 @@
+%button {
+	display: block;
+	padding: 15px 0;
+	background: $button-background;
+	color: $button-color;
+
+	&:hover {
+		cursor: pointer;
+		background: $button-hover-background;
+	}
+}

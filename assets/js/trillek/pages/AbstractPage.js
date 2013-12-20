@@ -1,7 +1,7 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'lodash',
+	'stapes'
+], function (_, Stapes) {
 	/**
 	 * Base page class. A page kicks off a controller which in turn fires off
 	 * to views and models. Pages contain a static value called `route` which
@@ -10,7 +10,7 @@ define([
 	 * PageRouter will use this to display your pages when your route is
 	 * matched.
 	 *
-	 * @class
+	 * @class AbstractPage
 	 */
 	var AbstractPage = Stapes.subclass(/** @lends AbstractPage.prototype */ {
 		/**

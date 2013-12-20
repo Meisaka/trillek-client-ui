@@ -1,13 +1,14 @@
 define([
 	'trillek/pages/AbstractPage',
 	'trillek/pages/SplashPage',
-	'trillek/pages/HomePage'
-], function (AbstractPage, SplashPage, HomePage) {
+	'trillek/pages/HomePage',
+	'trillek/services'
+], function (AbstractPage, SplashPage, HomePage, services) {
 	/**
 	 * This should be the entry point into the application. It will load the
 	 * splash route and redirect to the home page after some time has passed.
 	 *
-	 * @class
+	 * @class IndexPage
 	 * @augments AbstractPage
 	 */
 	var IndexPage = AbstractPage.subclass(/** @lends IndexPage.prototype */ {
@@ -15,10 +16,10 @@ define([
 		 * Displays the appropriate pages for the initial load.
 		 */
 		initialisePage: function () {
-			trillek.pageRouter.setHashUsingPage(SplashPage);
+			services.pageRouter.setHashUsingPage(SplashPage);
 			setTimeout(function () {
-				trillek.pageRouter.setHashUsingPage(HomePage);
-			}, 1000);
+				services.pageRouter.setHashUsingPage(HomePage);
+			}, 3000);
 		}
 	});
 

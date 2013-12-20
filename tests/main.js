@@ -1,6 +1,10 @@
 require.config({
+	baseUrl: './',
 	paths: {
-		trillek: '../assets/js/trillek',
+		trillek: '../assets/js/trillek'
+	},
+	lodashLoader: {
+		root: '../assets/templates'
 	}
 });
 
@@ -8,31 +12,31 @@ mocha.setup('tdd');
 mocha.reporter('html');
 window.assert = chai.assert;
 
-define([
-	'../assets/js/require-config',
+require([
+	'spec/services',
+	'spec/services/PageRouter',
+	'spec/services/PageDisplayManager',
+	'spec/services/GameBridge',
+	'spec/services/Selector',
 
-	'tests/services/PageRouter',
-	'tests/services/PageDisplayManager',
-	'tests/services/GameBridge',
+	'spec/pages/all',
+	'spec/pages/AbstractPage',
+	'spec/pages/IndexPage',
+	'spec/pages/SplashPage',
+	'spec/pages/HomePage',
+	'spec/pages/GamePage',
 
-	'tests/pages/all',
-	'tests/pages/AbstractPage',
-	'tests/pages/IndexPage',
-	'tests/pages/SplashPage',
-	'tests/pages/HomePage',
-	'tests/pages/GamePage',
+	'spec/controllers/AbstractController',
+	'spec/controllers/SplashPageController',
+	'spec/controllers/HomePageController',
+	'spec/controllers/GamePageController',
 
-	'tests/controllers/AbstractController',
-	'tests/controllers/SplashPageController',
-	'tests/controllers/HomePageController',
-	'tests/controllers/GamePageController',
+	'spec/views/AbstractView',
+	'spec/views/SplashPageView',
+	'spec/views/HomePageView',
+	'spec/views/GamePageView',
 
-	'tests/views/AbstractView',
-	'tests/views/SplashPageView',
-	'tests/views/HomePageView',
-	'tests/views/GamePageView',
-
-	'tests/models/AbstractModel'
+	'spec/models/AbstractModel'
 ], function (config) {
 	mocha.run();
 });

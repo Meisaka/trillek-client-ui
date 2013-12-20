@@ -1,11 +1,12 @@
 define([
+	'lodash',
 	'trillek/pages/AbstractPage',
 	'trillek/controllers/GamePageController'
-], function (AbstractPage, GamePageController) {
+], function (_, AbstractPage, GamePageController) {
 	/**
 	 * Transparent page that renders the game underneath it.
 	 *
-	 * @class
+	 * @class GamePage
 	 * @augments AbstractPage
 	 */
 	var GamePage = AbstractPage.subclass(/** @lends GamePage.prototype */ {
@@ -14,8 +15,8 @@ define([
 		 */
 		initialisePage: function () {
 			this._controller = new GamePageController();
-			this._controller.on('renderComplete', this.setContainerElementHTML.bind(this));
-			this._controller.renderAll();
+			this._controller.on('renderComplete', _.bind(this.setContainerElementHTML, this));
+			this._controller.renderView();
 		}
 	});
 

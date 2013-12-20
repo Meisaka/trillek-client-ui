@@ -1,6 +1,6 @@
 define([
 	'trillek/views/AbstractView',
-	'stache!templates/pages/game'
+	'tmpl!pages/game'
 ], function (AbstractView, gamePageTemplate) {
 	/**
 	 * @class
