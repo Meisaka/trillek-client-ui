@@ -17,6 +17,7 @@ require([
 	'spec/services/PageRouter',
 	'spec/services/PageDisplayManager',
 	'spec/services/GameBridge',
+	'spec/services/Selector',
 
 	'spec/pages/all',
 	'spec/pages/AbstractPage',
