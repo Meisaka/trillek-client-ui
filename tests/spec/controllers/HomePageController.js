@@ -21,12 +21,12 @@ define([
 
 			test('calls play on the game bridge', function () {
 				this.controller._onPlayClicked();
-				assert.isTrue(this.playSpy.called);
+				assert.isTrue(this.playSpy.called, 'play was called');
 			});
 
 			test('emits playClicked', function () {
 				this.controller._onPlayClicked();
-				assert.isTrue(this.playClickedSpy.called);
+				assert.isTrue(this.playClickedSpy.called, 'playClicked was called');
 			});
 		});
 
@@ -44,7 +44,7 @@ define([
 
 			test('calls exit on the game bridge', function () {
 				this.controller._onExitClicked();
-				assert.isTrue(this.exitSpy.called);
+				assert.isTrue(this.exitSpy.called, 'exit was called');
 			});
 		});
 	});

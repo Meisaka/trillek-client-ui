@@ -9,7 +9,7 @@ define([
 		suite('#render()', function () {
 			test('returns a string', function () {
 				var result = this.view.render();
-				assert.isString(result);
+				assert.isString(result, 'render was a string');
 			});
 		});
 	});

@@ -19,7 +19,7 @@ define([
 
 			test('attempts to set the hash to GamePage', function () {
 				this.page._onPlayClicked();
-				assert.isTrue(this.hashSpy.calledWith(GamePage));
+				assert.isTrue(this.hashSpy.calledWith(GamePage), 'hash was called');
 			});
 		});
 	});

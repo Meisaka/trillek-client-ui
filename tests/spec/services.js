@@ -8,25 +8,25 @@ define([
 	suite('services', function () {
 		suite('#pageRouter', function () {
 			test('has a PageRouter', function () {
-				assert.instanceOf(services.pageRouter, PageRouter);
+				assert.instanceOf(services.pageRouter, PageRouter, 'has a PageRouter');
 			});
 		});
 
 		suite('#pageDisplayManager', function () {
 			test('has a PageDisplayManager', function () {
-				assert.instanceOf(services.pageDisplayManager, PageDisplayManager);
+				assert.instanceOf(services.pageDisplayManager, PageDisplayManager, 'has a PageDisplayManager');
 			});
 		});
 
 		suite('#gameBridge', function () {
 			test('has a GameBridge', function () {
-				assert.instanceOf(services.gameBridge, GameBridge);
+				assert.instanceOf(services.gameBridge, GameBridge, 'has a GameBridge');
 			});
 		});
 
 		suite('#selector', function () {
 			test('has a Selector', function () {
-				assert.instanceOf(services.selector, Selector);
+				assert.instanceOf(services.selector, Selector, 'has a Selector');
 			});
 		});
 	});

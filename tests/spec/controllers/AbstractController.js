@@ -14,7 +14,7 @@ define([
 
 			test('emits the renderComplete event', function () {
 				this.controller.renderView();
-				assert.isTrue(this.renderSpy.called);
+				assert.isTrue(this.renderSpy.called, 'render was called');
 			});
 		});
 	});

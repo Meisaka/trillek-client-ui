@@ -10,7 +10,7 @@ define([
 		suite('#find', function () {
 			test('if nothing is found, returns null', function () {
 				var result = this.selector.find('foobar');
-				assert.isNull(result);
+				assert.isNull(result, 'the result is null');
 			});
 
 			test('if there is a match, returns a HTMLElement', function () {
