@@ -18,13 +18,13 @@ define([
 			delete window.game;
 		});
 
-		suite('#isGameObjectPresent()', function () {
+		suite('#_isGameObjectPresent()', function () {
 			test('returns false with no bridge object', function () {
-				assert.isFalse(this.bridge.isGameObjectPresent());
+				assert.isFalse(this.bridge._isGameObjectPresent());
 			});
 
 			test('returns true with a bridge object globally', function () {
-				assert.isTrue(this.bridgeWithObject.isGameObjectPresent());
+				assert.isTrue(this.bridgeWithObject._isGameObjectPresent());
 			});
 		});
 

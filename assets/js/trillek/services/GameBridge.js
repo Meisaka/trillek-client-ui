@@ -14,19 +14,26 @@ define([
 
 		/**
 		 * @return {Boolean}
+		 * @private
 		 */
-		isGameObjectPresent: function () {
+		_isGameObjectPresent: function () {
 			return typeof this._gameObject === 'object';
 		},
 
+		/**
+		 * Starts the game.
+		 */
 		play: function () {
-			if (this.isGameObjectPresent()) {
+			if (this._isGameObjectPresent()) {
 				this._gameObject.play();
 			}
 		},
 
+		/**
+		 * Exits the game.
+		 */
 		exit: function () {
-			if (this.isGameObjectPresent()) {
+			if (this._isGameObjectPresent()) {
 				this._gameObject.exit();
 			}
 		}
