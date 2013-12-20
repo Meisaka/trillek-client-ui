@@ -1,9 +1,9 @@
 define([
-	'stapes',
 	'lodash',
+	'stapes',
 	'crossroads',
 	'hasher'
-], function (Stapes, _, crossroads, hasher) {
+], function (_, Stapes, crossroads, hasher) {
 	var PageRouter = Stapes.subclass(/** @lends PageRouter.prototype */ {
 		/**
 		 * Thin wrapper around the crossroads and hasher libraries. Allows for easy

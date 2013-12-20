@@ -1,9 +1,9 @@
 define([
-	'trillek/controllers/AbstractController',
 	'lodash',
+	'trillek/controllers/AbstractController',
 	'trillek/views/HomePageView',
 	'trillek/services'
-], function (AbstractController, _, HomePageView, services) {
+], function (_, AbstractController, HomePageView, services) {
 	var HomePageController = AbstractController.subclass(/** @lends HomePageController.prototype */ {
 		/**
 		 * @constructs

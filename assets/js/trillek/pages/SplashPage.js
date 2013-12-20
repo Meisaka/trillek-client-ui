@@ -1,8 +1,8 @@
 define([
-	'trillek/pages/AbstractPage',
 	'lodash',
+	'trillek/pages/AbstractPage',
 	'trillek/controllers/SplashPageController'
-], function (AbstractPage, _, SplashPageController) {
+], function (_, AbstractPage, SplashPageController) {
 	/**
 	 * Page to display after the game opens. This is used as the initial route
 	 * and could handle a loading progress bar in the future if the client

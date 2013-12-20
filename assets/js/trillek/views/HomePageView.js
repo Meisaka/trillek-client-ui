@@ -1,10 +1,10 @@
 define([
-	'trillek/views/AbstractView',
 	'lodash',
+	'trillek/views/AbstractView',
 	'trillek/services',
 	'tmpl!pages/home',
 	'i18n!trillek/nls/buttons'
-], function (AbstractView, _, services, homePageTemplate, buttons) {
+], function (_, AbstractView, services, homePageTemplate, buttons) {
 	/**
 	 * @class
 	 * @augments AbstractView

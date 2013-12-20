@@ -1,7 +1,7 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'lodash',
+	'stapes'
+], function (_, Stapes) {
 	var PageDisplayManager = Stapes.subclass(/** @lends PageDisplayManager.prototype */ {
 		/**
 		 * Listens to events from the provided PageRouter instance. Where

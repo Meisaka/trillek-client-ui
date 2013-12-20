@@ -1,7 +1,7 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'lodash',
+	'stapes'
+], function (_, Stapes) {
 	/**
 	 * Base view that all other views inherit from.
 	 *

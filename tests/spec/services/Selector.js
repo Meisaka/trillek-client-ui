@@ -1,7 +1,7 @@
 define([
-	'trillek/services/Selector',
-	'lodash'
-], function (Selector, _) {
+	'lodash',
+	'trillek/services/Selector'
+], function (_, Selector) {
 	suite('services/Selector', function () {
 		setup(function () {
 			this.selector = new Selector();

@@ -1,7 +1,7 @@
 define([
-	'stapes',
-	'lodash'
-], function (Stapes, _) {
+	'lodash',
+	'stapes'
+], function (_, Stapes) {
 	/**
 	 * Base page class. A page kicks off a controller which in turn fires off
 	 * to views and models. Pages contain a static value called `route` which

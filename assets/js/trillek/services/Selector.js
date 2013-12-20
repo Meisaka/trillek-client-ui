@@ -1,8 +1,8 @@
 define([
+	'lodash',
 	'stapes',
-	'qwery',
-	'lodash'
-], function (Stapes, qwery, _) {
+	'qwery'
+], function (_, Stapes, qwery) {
 	/**
 	 * Provides CSS selectors by proxying through qwery.
 	 *

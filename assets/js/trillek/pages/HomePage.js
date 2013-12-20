@@ -1,10 +1,10 @@
 define([
-	'trillek/pages/AbstractPage',
 	'lodash',
+	'trillek/pages/AbstractPage',
 	'trillek/controllers/HomePageController',
 	'trillek/pages/GamePage',
 	'trillek/services'
-], function (AbstractPage, _, HomePageController, GamePage, services) {
+], function (_, AbstractPage, HomePageController, GamePage, services) {
 	/**
 	 * Initial page to load after the splash. This will act as the home or hub
 	 * page where the user will branch out from.

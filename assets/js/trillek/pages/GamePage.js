@@ -1,8 +1,8 @@
 define([
-	'trillek/pages/AbstractPage',
 	'lodash',
+	'trillek/pages/AbstractPage',
 	'trillek/controllers/GamePageController'
-], function (AbstractPage, _, GamePageController) {
+], function (_, AbstractPage, GamePageController) {
 	/**
 	 * Transparent page that renders the game underneath it.
 	 *
