@@ -4,4 +4,5 @@ define({
 		exit: 'Exit'
 	},
 	'pl-pl': true
+	'fr-fr': true
 });
