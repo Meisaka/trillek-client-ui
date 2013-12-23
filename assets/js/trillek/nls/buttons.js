@@ -3,6 +3,6 @@ define({
 		start: 'Start',
 		exit: 'Exit'
 	},
-	'pl-pl': true
+	'pl-pl': true,
 	'fr-fr': true
 });
