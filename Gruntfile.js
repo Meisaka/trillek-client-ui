@@ -17,8 +17,7 @@ module.exports = function (grunt) {
 					config: './config.rb',
 					environment: 'production',
 					outputStyle: 'compressed',
-					noLineComments: true,
-					imagesDir: 'build/assets/images'
+					noLineComments: true
 				}
 			}
 		},
