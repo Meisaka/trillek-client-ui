@@ -10,6 +10,6 @@
     "grunt-contrib-jshint": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-clean": "*",
-    "grunt-jsdoc": "~0.4.2"
+    "grunt-jsdoc": "*"
   }
 }

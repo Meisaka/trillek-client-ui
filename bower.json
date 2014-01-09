@@ -1,0 +1,10 @@
+{
+  "name": "trillek-ui",
+  "dependencies": {
+    "requirejs": "~2.1.10"
+  },
+  "devDependencies": {
+    "almond": "~0.2.6",
+    "jasmine": "~2.0.0"
+  }
+}

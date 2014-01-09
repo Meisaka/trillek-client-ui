@@ -7,12 +7,14 @@ It is a single page web application that can interface with the game through a s
 The following systems are used to fetch the dependencies.
 
  * [Bundler][] (Ruby)
+ * [Bower][] (Browser)
  * [NPM][] (Node.js)
 
 You can install the dependencies by executing these commands.
 
 ```bash
 bundle install
+bower install
 npm install
 ```
 
@@ -56,7 +58,7 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 ## Tests
 
-All tests are stored within `./tests`, which use [jasmine][]. You can run the tests by opening `./tests/index.html` in your browser.
+All tests are stored within `./tests`, they run off of [Jasmine][]. You can run the tests by opening `./tests/index.html` in your browser.
 
 Although the tests should run in any modern browser, the main one we need to worry about is Chrome / Chromium. This is because the game will render the UI using WebKit / Blink, the rendering engine used within Chrome.
 
@@ -115,9 +117,10 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [jsdoc]: http://usejsdoc.org/
 [tdd]: http://en.wikipedia.org/wiki/Test-driven_development
 [unlicence]: http://unlicense.org/
-[jasmine]: http://pivotal.github.io/jasmine/
+[jasmine]: http://jasmine.github.io/2.0/introduction.html
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
+[bower]: http://bower.io/
 [node]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [grunt]: http://gruntjs.com/
