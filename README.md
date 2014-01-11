@@ -42,7 +42,7 @@ Now you'll be able to use the next section to open the UI in your browser.
 
 ## Viewing in your browser
 
-Because of the way Trillek will load the web UI, without a server, all paths are relative. This means that you can actually open `./loader.html` directly using the `file://` protocol, without a server, and it should run absolutely fine (assuming you've compiled the SASS to CSS).
+Because of the way Trillek will load the web UI, without a server, all paths are relative. This means that you can actually open `./src/index.html` directly using the `file://` protocol, without a server, and it should run absolutely fine (assuming you've compiled the SASS to CSS).
 
 It's also possible to load the UI using a small HTTP server; I like to use Python for this. Python's built in server is invoked differently between versions 2 and 3, simply `cd` to this directory and execute the appropriate command.
 
@@ -72,7 +72,7 @@ grunt
 
 That's it. That will compile and minify the SASS, plus build any requires sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
 
-Once you're built you can load the built files using `./build/loader.html` instead of `./loader.html`. The `./build/loader.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
+Once you're built you can load the built files using `./build/index.html` instead of `./src/index.html`. The `./build/index.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
 
 All built files are stored within `./build/assets/`, once the build is complete it will compress the contents of that directory and drop a zip file into `./dist` named using the current project name and version. For example: `trillek-ui-1.0.0.zip`.
 

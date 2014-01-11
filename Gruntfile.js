@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		copy: {
 			main: {
 				expand: true,
-				src: './assets/images/raw/**',
+				src: './src/assets/images/raw/**',
 				dest: './build/'
 			}
 		},
@@ -34,11 +34,11 @@ module.exports = function (grunt) {
 			}
 		},
 		jshint: {
-			all: './assets/js/**/*.js'
+			all: './src/assets/js/**/*.js'
 		},
 		jsdoc: {
 			dist: {
-				src: ['./assets/js/**/*.js'],
+				src: ['./src/assets/js/**/*.js'],
 				options: {
 					destination: 'doc'
 				}
@@ -48,12 +48,12 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					name: 'almond',
-					baseUrl: './assets/js',
+					baseUrl: './src/assets/js',
 					include: [
 						'angular',
 						'main'
 					],
-					mainConfigFile: './assets/js/require-config.js',
+					mainConfigFile: './src/assets/js/require-config.js',
 					out: './build/assets/js/main.min.js',
 					optimize: 'uglify2',
 					wrap: true,
