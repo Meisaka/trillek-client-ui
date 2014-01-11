@@ -50,7 +50,6 @@ module.exports = function (grunt) {
 					name: 'almond',
 					baseUrl: './src/assets/js',
 					include: [
-						'angular',
 						'main'
 					],
 					mainConfigFile: './src/assets/js/require-config.js',

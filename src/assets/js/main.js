@@ -1,4 +1,6 @@
-require(function () {
-	angular.module('foo', []).controller('SomeCTL', function ($scope, $http) {
-	});
+require([
+	'angular',
+	'trillek/main'
+], function (angular, trillek) {
+	angular.bootstrap(document, [trillek.name]);
 });
