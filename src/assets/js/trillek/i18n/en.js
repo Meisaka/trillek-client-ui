@@ -1,4 +1,4 @@
 define({
-	START: 'start',
+	PLAY: 'play',
 	QUIT: 'quit'
 });

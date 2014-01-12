@@ -10,13 +10,21 @@ define(function (require) {
 		'pascalprecht.translate'
 	]);
 
+	trillek
+		.controller('MainMenuController', require('trillek/controllers/MainMenuController'))
+		.factory('gameBridge', require('trillek/services/gameBridge'));
+
 	trillek.config(['$routeProvider', '$translateProvider', function ($routeProvider, $translateProvider) {
 		$routeProvider
-			.when('/main-menu', {
-				template: require('text!trillek/views/main-menu.html')
+			.when(config.routes.mainMenu, {
+				template: require('text!trillek/views/main-menu.html'),
+				controller: 'MainMenuController'
+			})
+			.when(config.routes.play, {
+				template: require('text!trillek/views/play.html')
 			})
 			.otherwise({
-				redirectTo: '/main-menu'
+				redirectTo: config.routes.mainMenu
 			});
 
 		$translateProvider
