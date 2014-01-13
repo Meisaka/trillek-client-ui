@@ -2,6 +2,8 @@ var packageFilePath = './package.json';
 var packageFile = require(packageFilePath);
 
 module.exports = function (grunt) {
+	'use strict';
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON(packageFilePath),
 		copy: {
@@ -35,6 +37,20 @@ module.exports = function (grunt) {
 		},
 		jshint: {
 			all: './src/assets/js/**/*.js'
+		},
+		karma: {
+			options: {
+				configFile: './tests/karma.conf.js',
+			},
+			once: {
+				browsers: ['PhantomJS'],
+				singleRun: true
+			},
+			continuous: {
+				browsers: ['PhantomJS']
+			},
+			dev: {
+			}
 		},
 		jsdoc: {
 			dist: {
@@ -84,6 +100,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -94,6 +111,7 @@ module.exports = function (grunt) {
 		'compass',
 		'imagemin',
 		'jshint',
+		'karma:once',
 		'jsdoc',
 		'requirejs',
 		'compress'
