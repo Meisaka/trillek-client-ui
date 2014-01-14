@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 		},
 		karma: {
 			options: {
-				configFile: './tests/karma.conf.js',
+				configFile: './karma.conf.js',
 			},
 			once: {
 				browsers: ['PhantomJS'],

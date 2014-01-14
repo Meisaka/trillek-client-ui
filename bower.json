@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "almond": "~0.2.6",
-    "jasmine": "~2.0.0",
     "angular-mocks": "~1.2.8"
   }
 }

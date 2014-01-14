@@ -6,6 +6,7 @@ for (var file in window.__karma__.files) {
 }
 
 require.config({
+	baseUrl: '/base/src',
 	deps: tests,
 	callback: window.__karma__.start
 });
