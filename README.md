@@ -58,12 +58,9 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 ## Tests
 
-All tests are stored within `./tests`, they run off of [Jasmine][] and [Karma][]. You can run the tests in the following ways.
+All tests are stored within `./tests`, they use [Jasmine][] for assertions and execution. You can run the tests by opening `./tests/index.html` in your browser.
 
- * `grunt karma:once` - Executes the tests with [PhantomJS][] and finishes.
- * `grunt karma:continuous` - Executes the tests with [PhantomJS][] and continually runs as you change the code.
- * `grunt karma:dev` - Executes the tests with Chrome and continually runs as you change the code.
- * `grunt` - Builds the entire project, which happens to call `grunt karma:once` in the process.
+Although the tests should run in any modern browser, the main one we need to worry about is Chrome / Chromium. This is because the game will render the UI using WebKit / Blink, the rendering engine used within Chrome.
 
 ## Building
 
@@ -121,8 +118,6 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [tdd]: http://en.wikipedia.org/wiki/Test-driven_development
 [unlicence]: http://unlicense.org/
 [jasmine]: http://jasmine.github.io/2.0/introduction.html
-[karma]: http://karma-runner.github.io/
-[phantomjs]: http://phantomjs.org/
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/

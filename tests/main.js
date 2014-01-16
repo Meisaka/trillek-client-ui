@@ -1,12 +1,19 @@
-var tests = [];
-for (var file in window.__karma__.files) {
-	if (/\.spec\.js$/.test(file)) {
-		tests.push(file);
-	}
-}
-
 require.config({
-	baseUrl: '/base/src',
-	deps: tests,
-	callback: window.__karma__.start
+	baseUrl: '../src',
+	paths: {
+		specs: '../tests/specs'
+	}
 });
+
+(function () {
+	'use strict';
+
+	var bootJasmine = window.onload;
+	window.onload = null;
+
+	require([
+		'specs/controllers/MainMenuController.spec'
+	], function () {
+		bootJasmine();
+	});
+}());

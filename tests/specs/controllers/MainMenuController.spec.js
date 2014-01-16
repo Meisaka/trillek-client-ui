@@ -3,9 +3,6 @@ define(function (require) {
 
 	var mocks = require('angularMocks');
 
-	describe('something', function () {
-		it('should', function () {
-			expect(true).toBe(true);
-		});
+	describe('controllers/MainMenuController', function () {
 	});
 });
