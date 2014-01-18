@@ -36,7 +36,13 @@ module.exports = function (grunt) {
 			}
 		},
 		jshint: {
-			all: './src/assets/js/**/*.js'
+			main: {
+				jshintrc: true,
+				src: [
+					'./src/assets/js/**/*.js',
+					'./tests/**/*.js'
+				]
+			}
 		},
 		jsdoc: {
 			dist: {

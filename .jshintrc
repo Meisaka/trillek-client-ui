@@ -1,13 +1,12 @@
 {
-	"predef": {
-		"define": true,
-		"suite": true,
-		"test": true,
-		"assert": true,
-		"setup": true,
-		"btoa": true,
-		"sinon": true
-	},
+	"predef": [
+		"define",
+		"describe",
+		"it",
+		"jasmine",
+		"beforeEach",
+		"expect"
+	],
 	"bitwise": true,
 	"camelcase": true,
 	"curly": true,
