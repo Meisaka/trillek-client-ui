@@ -1,7 +1,7 @@
 {
   "name": "trillek-ui",
   "version": "0.0.1",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-requirejs": "*",
