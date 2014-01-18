@@ -12,7 +12,9 @@ require.config({
 	window.onload = null;
 
 	require([
-		'specs/controllers/MainMenuController.spec'
+		'specs/controllers/MainMenuController.spec',
+		'specs/services/gameBridge.spec',
+		'specs/views/main-menu.spec'
 	], function () {
 		bootJasmine();
 	});
