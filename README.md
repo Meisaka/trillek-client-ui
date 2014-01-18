@@ -70,7 +70,7 @@ Presuming you have all of the dependencies installed correctly, you can simply e
 grunt
 ```
 
-That's it. That will compile and minify the SASS, plus build any requires sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
+That's it. That will compile and minify the SASS, plus build any required sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
 
 Once you're built you can load the built files using `./build/index.html` instead of `./src/index.html`. The `./build/index.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
 
