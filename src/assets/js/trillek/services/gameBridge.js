@@ -1,6 +1,14 @@
 define(function () {
 	'use strict';
 
+	/**
+	 * The game bridge is used to talk to the global game object.
+	 *
+	 * @function gameBridgeFactory
+	 * @param {Object} $window
+	 * @param {Object} $location
+	 * @param {Object} config
+	 */
 	function gameBridgeFactory($window, $location, config) {
 		function executeGameMethod(methodName) {
 			try {
