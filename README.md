@@ -116,8 +116,8 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [jshint]: http://www.jshint.com/
 [jsdoc]: http://usejsdoc.org/
 [tdd]: http://en.wikipedia.org/wiki/Test-driven_development
-[unlicence]: http://unlicense.org/
 [jasmine]: http://jasmine.github.io/2.0/introduction.html
+[unlicence]: http://unlicense.org/
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
