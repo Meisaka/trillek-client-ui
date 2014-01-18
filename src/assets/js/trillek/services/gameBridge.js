@@ -1,13 +1,13 @@
 define(function (require) {
-	var config = require('trillek/config');
+	'use strict';
 
-	function gameBridgeFactory($location) {
+	function gameBridgeFactory($location, config) {
 		function executeGameMethod(methodName) {
 			try {
 				window.game[methodName]();
 			}
 			catch (e) {
-				console.log('Could not execute game.' + methodName);
+				console.error('Could not execute game.' + methodName);
 			}
 		}
 
@@ -22,7 +22,7 @@ define(function (require) {
 		};
 	}
 
-	gameBridgeFactory.$inject = ['$location'];
+	gameBridgeFactory.$inject = ['$location', 'config'];
 
 	return gameBridgeFactory;
 });

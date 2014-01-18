@@ -1,5 +1,5 @@
-define(function (require) {
-	var config = require('trillek/config');
+define(function () {
+	'use strict';
 
 	function MainMenuController($scope, gameBridge) {
 		$scope.play = gameBridge.play;
