@@ -4,5 +4,6 @@ define(function (require) {
 	var angular = require('angular');
 
 	return angular.module('trillek.controllers', [])
-		.controller('MainMenuController', require('./MainMenuController'));
+		.controller('MainMenuController', require('./MainMenuController'))
+		.controller('SelectLanguageController', require('./SelectLanguageController'));
 });

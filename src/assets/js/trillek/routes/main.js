@@ -11,11 +11,12 @@ define(function (require) {
 					template: require('text!trillek/views/main-menu.html'),
 					controller: 'MainMenuController'
 				})
+				.when(config.routes.selectLanguage, {
+					template: require('text!trillek/views/select-language.html'),
+					controller: 'SelectLanguageController'
+				})
 				.when(config.routes.play, {
 					template: require('text!trillek/views/play.html')
-				})
-				.when(config.routes.selectLanguage, {
-					template: require('text!trillek/views/select-language.html')
 				})
 				.otherwise({
 					redirectTo: config.routes.mainMenu

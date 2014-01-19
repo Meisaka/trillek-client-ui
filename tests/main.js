@@ -13,8 +13,12 @@ require.config({
 
 	require([
 		'specs/controllers/MainMenuController.spec',
-		'specs/services/gameBridge.spec',
-		'specs/views/main-menu.spec'
+		'specs/controllers/SelectLanguageController.spec',
+
+		'specs/views/main-menu.spec',
+		'specs/views/select-language.spec',
+
+		'specs/services/gameBridge.spec'
 	], function () {
 		bootJasmine();
 	});
