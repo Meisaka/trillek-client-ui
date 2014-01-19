@@ -1,6 +1,9 @@
 define({
 	i18n: {
-		preferredLanguage: 'en'
+		preferredLanguage: 'en',
+		availableLanguages: {
+			en: 'english'
+		}
 	},
 	routes: {
 		mainMenu: '/main-menu',

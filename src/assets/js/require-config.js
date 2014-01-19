@@ -5,7 +5,10 @@ require.config({
 		lodash: '../bower_components/lodash/dist/lodash',
 		angular: '../bower_components/angular/angular',
 		angularRoute: '../bower_components/angular-route/angular-route',
+		angularCookies: '../bower_components/angular-cookies/angular-cookies',
 		angularTranslate: '../bower_components/angular-translate/angular-translate',
+		angularTranslateStorageCookie: '../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie',
+		angularTranslateStorageLocal: '../bower_components/angular-translate-storage-local/angular-translate-storage-local',
 		angularMocks: '../bower_components/angular-mocks/angular-mocks',
 		trillek: './assets/js/trillek'
 	},
@@ -16,8 +19,17 @@ require.config({
 		angularRoute: {
 			deps: ['angular']
 		},
+		angularCookies: {
+			deps: ['angular']
+		},
 		angularTranslate: {
 			deps: ['angular']
+		},
+		angularTranslateStorageCookie: {
+			deps: ['angularTranslate']
+		},
+		angularTranslateStorageLocal: {
+			deps: [ 'angularTranslateStorageCookie']
 		},
 		angularMocks: {
 			deps: ['angular'],

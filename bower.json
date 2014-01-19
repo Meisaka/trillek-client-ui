@@ -9,6 +9,8 @@
     "lodash": "~2.4.1",
     "jasmine": "~2.0.0",
     "almond": "~0.2.6",
-    "angular-mocks": "~1.2.8"
+    "angular-mocks": "~1.2.8",
+    "angular-translate-storage-local": "~0.1.6",
+    "angular-cookies": "~1.2.9"
   }
 }
