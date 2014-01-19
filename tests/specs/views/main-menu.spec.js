@@ -24,16 +24,22 @@ define(function (require) {
 			beforeEach(function () {
 				scope.play = jasmine.createSpy('play');
 				scope.quit = jasmine.createSpy('quit');
+				scope.selectLanguage = jasmine.createSpy('selectLanguage');
 			});
 
-			it('should execute play when first item is clicked', function () {
+			it('should execute play when the first item is clicked', function () {
 				menuItems[0].click();
 				expect(scope.play).toHaveBeenCalled();
 			});
 
-			it('should execute quit when second item is clicked', function () {
+			it('should execute quit when the second item is clicked', function () {
 				menuItems[1].click();
 				expect(scope.quit).toHaveBeenCalled();
+			});
+
+			it('should execute selectLanguage when the third item is clicked', function () {
+				menuItems[2].click();
+				expect(scope.selectLanguage).toHaveBeenCalled();
 			});
 		});
 	});

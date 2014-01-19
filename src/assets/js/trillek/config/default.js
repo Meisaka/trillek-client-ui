@@ -4,6 +4,7 @@ define({
 	},
 	routes: {
 		mainMenu: '/main-menu',
-		play: '/play'
+		play: '/play',
+		selectLanguage: '/select-language'
 	}
 });

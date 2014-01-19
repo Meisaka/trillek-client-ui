@@ -6,10 +6,8 @@ define(function () {
 	 *
 	 * @function gameBridgeFactory
 	 * @param {Object} $window
-	 * @param {Object} $location
-	 * @param {Object} config
 	 */
-	function gameBridgeFactory($window, $location, config) {
+	function gameBridgeFactory($window) {
 		function executeGameMethod(methodName) {
 			try {
 				$window.game[methodName]();
@@ -22,7 +20,6 @@ define(function () {
 		return {
 			play: function () {
 				executeGameMethod('play');
-				$location.path(config.routes.play);
 			},
 			quit: function () {
 				executeGameMethod('quit');
@@ -30,7 +27,7 @@ define(function () {
 		};
 	}
 
-	gameBridgeFactory.$inject = ['$window', '$location', 'config'];
+	gameBridgeFactory.$inject = ['$window'];
 
 	return gameBridgeFactory;
 });

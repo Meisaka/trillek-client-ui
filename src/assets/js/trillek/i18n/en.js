@@ -1,4 +1,5 @@
 define({
 	PLAY: 'play',
-	QUIT: 'quit'
+	QUIT: 'quit',
+	SELECT_LANGUAGE: 'select language'
 });

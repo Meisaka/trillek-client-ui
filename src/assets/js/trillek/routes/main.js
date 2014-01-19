@@ -14,6 +14,9 @@ define(function (require) {
 				.when(config.routes.play, {
 					template: require('text!trillek/views/play.html')
 				})
+				.when(config.routes.selectLanguage, {
+					template: require('text!trillek/views/select-language.html')
+				})
 				.otherwise({
 					redirectTo: config.routes.mainMenu
 				});

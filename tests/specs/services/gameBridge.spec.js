@@ -6,8 +6,6 @@ define(function (require) {
 	describe('trillek/services/gameBridge', function () {
 		var service;
 		var global;
-		var location;
-		var config;
 
 		beforeEach(function () {
 			global = {
@@ -16,15 +14,7 @@ define(function (require) {
 				},
 				game: {}
 			};
-			location = {
-				path: jasmine.createSpy('path')
-			};
-			config = {
-				routes: {
-					play: 'PLAY_ROUTE'
-				}
-			};
-			service = gameBridge(global, location, config);
+			service = gameBridge(global, location);
 		});
 
 		it('should log an error when the method does not exist', function () {
@@ -41,11 +31,6 @@ define(function (require) {
 			it('should proxy play to the global object version', function () {
 				service.play();
 				expect(global.game.play).toHaveBeenCalled();
-			});
-
-			it('should try to load the play route when calling play', function () {
-				service.play();
-				expect(location.path).toHaveBeenCalledWith(config.routes.play);
 			});
 
 			it('should proxy quit to the global object version', function () {
