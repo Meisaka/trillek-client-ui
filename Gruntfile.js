@@ -2,12 +2,14 @@ var packageFilePath = './package.json';
 var packageFile = require(packageFilePath);
 
 module.exports = function (grunt) {
+	'use strict';
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON(packageFilePath),
 		copy: {
 			main: {
 				expand: true,
-				src: './assets/images/raw/**',
+				src: './src/assets/images/raw/**',
 				dest: './build/'
 			}
 		},
@@ -34,11 +36,17 @@ module.exports = function (grunt) {
 			}
 		},
 		jshint: {
-			all: './assets/js/**/*.js'
+			main: {
+				jshintrc: true,
+				src: [
+					'./src/assets/js/**/*.js',
+					'./tests/**/*.js'
+				]
+			}
 		},
 		jsdoc: {
 			dist: {
-				src: ['./assets/js/**/*.js'],
+				src: ['./src/assets/js/**/*.js'],
 				options: {
 					destination: 'doc'
 				}
@@ -48,9 +56,11 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					name: 'almond',
-					baseUrl: './assets/js',
-					include: 'main',
-					mainConfigFile: './assets/js/require-config.js',
+					baseUrl: './src',
+					include: [
+						'assets/js/main'
+					],
+					mainConfigFile: './src/assets/js/require-config.js',
 					out: './build/assets/js/main.min.js',
 					optimize: 'uglify2',
 					wrap: true,

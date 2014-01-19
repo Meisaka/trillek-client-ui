@@ -42,7 +42,7 @@ Now you'll be able to use the next section to open the UI in your browser.
 
 ## Viewing in your browser
 
-Because of the way Trillek will load the web UI, without a server, all paths are relative. This means that you can actually open `./loader.html` directly using the `file://` protocol, without a server, and it should run absolutely fine (assuming you've compiled the SASS to CSS).
+Because of the way Trillek will load the web UI, without a server, all paths are relative. This means that you can actually open `./src/index.html` directly using the `file://` protocol, without a server, and it should run absolutely fine (assuming you've compiled the SASS to CSS).
 
 It's also possible to load the UI using a small HTTP server; I like to use Python for this. Python's built in server is invoked differently between versions 2 and 3, simply `cd` to this directory and execute the appropriate command.
 
@@ -58,7 +58,7 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 ## Tests
 
-All tests are stored within `./tests`, they use [chai][] and [mocha][] for assertions and execution. You can run the tests by opening `./tests/index.html` in your browser.
+All tests are stored within `./tests`, they use [Jasmine][] for assertions and execution. You can run the tests by opening `./tests/index.html` in your browser.
 
 Although the tests should run in any modern browser, the main one we need to worry about is Chrome / Chromium. This is because the game will render the UI using WebKit / Blink, the rendering engine used within Chrome.
 
@@ -70,9 +70,9 @@ Presuming you have all of the dependencies installed correctly, you can simply e
 grunt
 ```
 
-That's it. That will compile and minify the SASS, plus build any requires sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
+That's it. That will compile and minify the SASS, plus build any required sprite sheets, while concatenating and minifying all of the JavaScript. It also swaps out the relatively bulky [RequireJS][] script loader for it's tiny shim counterpart: [Almond][]. All in one tiny command.
 
-Once you're built you can load the built files using `./build/loader.html` instead of `./loader.html`. The `./build/loader.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
+Once you're built you can load the built files using `./build/index.html` instead of `./src/index.html`. The `./build/index.html` version points to the minified JavaScript file and could feasibly contain extra optimisations in the future.
 
 All built files are stored within `./build/assets/`, once the build is complete it will compress the contents of that directory and drop a zip file into `./dist` named using the current project name and version. For example: `trillek-ui-1.0.0.zip`.
 
@@ -81,6 +81,8 @@ If you have a build up of build artefacts, such as images that are no longer fou
 ## Documentation
 
 When you execute `grunt` or `grunt jsdoc` the inline [JSDoc][] comments within the source code will be parsed and turned into HTML. You can then view that documentation by loading the pages stored within the `doc` directory.
+
+The API documentation, detailing how the native program should talk to the UI, can be found within `API.md`.
 
 ## Contributing
 
@@ -116,9 +118,8 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [jshint]: http://www.jshint.com/
 [jsdoc]: http://usejsdoc.org/
 [tdd]: http://en.wikipedia.org/wiki/Test-driven_development
+[jasmine]: http://jasmine.github.io/2.0/introduction.html
 [unlicence]: http://unlicense.org/
-[chai]: http://chaijs.com/
-[mocha]: http://visionmedia.github.io/mocha/
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/

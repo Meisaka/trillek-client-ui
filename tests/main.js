@@ -1,42 +1,25 @@
 require.config({
-	baseUrl: './',
+	baseUrl: '../src',
 	paths: {
-		trillek: '../assets/js/trillek'
-	},
-	lodashLoader: {
-		root: '../assets/templates'
+		specs: '../tests/specs'
 	}
 });
 
-mocha.setup('tdd');
-mocha.reporter('html');
-window.assert = chai.assert;
+(function () {
+	'use strict';
 
-require([
-	'spec/services',
-	'spec/services/PageRouter',
-	'spec/services/PageDisplayManager',
-	'spec/services/GameBridge',
-	'spec/services/Selector',
+	var bootJasmine = window.onload;
+	window.onload = null;
 
-	'spec/pages/all',
-	'spec/pages/AbstractPage',
-	'spec/pages/IndexPage',
-	'spec/pages/SplashPage',
-	'spec/pages/HomePage',
-	'spec/pages/GamePage',
+	require([
+		'specs/controllers/MainMenuController.spec',
+		'specs/controllers/SelectLanguageController.spec',
 
-	'spec/controllers/AbstractController',
-	'spec/controllers/SplashPageController',
-	'spec/controllers/HomePageController',
-	'spec/controllers/GamePageController',
+		'specs/views/main-menu.spec',
+		'specs/views/select-language.spec',
 
-	'spec/views/AbstractView',
-	'spec/views/SplashPageView',
-	'spec/views/HomePageView',
-	'spec/views/GamePageView',
-
-	'spec/models/AbstractModel'
-], function (config) {
-	mocha.run();
-});
+		'specs/services/gameBridge.spec'
+	], function () {
+		bootJasmine();
+	});
+}());

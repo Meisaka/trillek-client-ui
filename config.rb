@@ -6,9 +6,9 @@ require 'normalize'
 http_path = '/'
 css_dir = 'build/assets/css'
 generated_images_dir = 'build/assets/sprites'
-sass_dir = 'assets/scss'
-images_dir = 'assets/images'
-javascripts_dir = 'assets/js'
+sass_dir = 'src/assets/scss'
+images_dir = 'src/assets/images'
+javascripts_dir = 'src/assets/js'
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
