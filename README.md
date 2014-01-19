@@ -82,6 +82,8 @@ If you have a build up of build artefacts, such as images that are no longer fou
 
 When you execute `grunt` or `grunt jsdoc` the inline [JSDoc][] comments within the source code will be parsed and turned into HTML. You can then view that documentation by loading the pages stored within the `doc` directory.
 
+The API documentation, detailing how the native program should talk to the UI, can be found within `API.md`.
+
 ## Contributing
 
 ### JavaScript
