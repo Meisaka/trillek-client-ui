@@ -10,6 +10,7 @@ define(function (require) {
 			$translateProvider
 				.preferredLanguage(config.i18n.preferredLanguage)
 				.translations('en', require('./en'))
+				.translations('pl', require('./pl'))
 				.useLocalStorage();
 		}]);
 });
