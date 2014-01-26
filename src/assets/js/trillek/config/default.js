@@ -2,7 +2,8 @@ define({
 	i18n: {
 		preferredLanguage: 'en',
 		availableLanguages: {
-			en: 'english'
+			en: 'english',
+			pl: 'polish'
 		}
 	},
 	routes: {
