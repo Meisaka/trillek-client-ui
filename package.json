@@ -1,5 +1,9 @@
 {
   "name": "trillek-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trillek-team/trillek-client-ui.git"
+  },
   "version": "1.0.0",
   "scripts": {
     "test": "grunt test --verbose"
