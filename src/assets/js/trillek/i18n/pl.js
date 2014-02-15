@@ -4,4 +4,3 @@ define({
 	SELECT_LANGUAGE: 'wybierz język',
 	DONE: 'gotowe'
 });
-
