@@ -97,7 +97,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-jsdoc');
 
-	grunt.registerTask('default', [
+	grunt.registerTask('build', [
 		'copy',
 		'compass',
 		'imagemin',
@@ -106,4 +106,5 @@ module.exports = function (grunt) {
 		'requirejs',
 		'compress'
 	]);
+	grunt.registerTask('default', ['build']);
 };
