@@ -3,7 +3,7 @@ define({
 		preferredLanguage: 'en',
 		availableLanguages: {
 			en: 'english',
-			pl: 'polish'
+			pl: 'polski'
 		}
 	},
 	routes: {
