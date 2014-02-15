@@ -44,6 +44,19 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		jasmine: {
+			src: './src/assets/js/trillek/**/*.js',
+			options: {
+				specs: './tests/specs/**/*.spec.js',
+				template: require('grunt-template-jasmine-requirejs'),
+				templateOptions: {
+					requireConfigFile: './src/assets/js/require-config.js',
+					requireConfig: {
+						baseUrl: './src'
+					}
+				}
+			}
+		},
 		jsdoc: {
 			dist: {
 				src: ['./src/assets/js/**/*.js'],
@@ -95,6 +108,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-jsdoc');
 
 	grunt.registerTask('build', [
@@ -102,9 +116,11 @@ module.exports = function (grunt) {
 		'compass',
 		'imagemin',
 		'jshint',
+		'jasmine',
 		'jsdoc',
 		'requirejs',
 		'compress'
 	]);
+
 	grunt.registerTask('default', ['build']);
 };
