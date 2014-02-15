@@ -62,6 +62,8 @@ All tests are stored within `./specs`, they use [Jasmine][] for assertions and e
 
 You can have the tests run whenever a file is changed within the `src` or `./specs` directories by executing `grunt test:continuous`.
 
+When the tests are executed a file will be created called `_SpecRunner.html`, you can open this within your browser if you need to use your browser for debugging purposes.
+
 ## Building
 
 Presuming you have all of the dependencies installed correctly, you can simply execute grunt.
