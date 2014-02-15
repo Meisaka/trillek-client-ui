@@ -4,7 +4,8 @@ define({
 		availableLanguages: {
 			en: 'english',
 			pl: 'polski',
-			nl: 'nederlands'
+			nl: 'nederlands',
+			da: 'dansk'
 		}
 	},
 	routes: {
