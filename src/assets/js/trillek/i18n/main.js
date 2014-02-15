@@ -4,6 +4,7 @@ define(function (require) {
 	var angular = require('angular');
 	require('angularTranslate');
 	require('angularTranslateStorageLocal');
+	require('angularTranslateHandlerLog');
 
 	return angular.module('trillek.i18n', ['pascalprecht.translate'])
 		.config(['config', '$translateProvider', function (config, $translateProvider) {
@@ -11,6 +12,7 @@ define(function (require) {
 				.preferredLanguage(config.i18n.preferredLanguage)
 				.translations('en', require('./en'))
 				.translations('pl', require('./pl'))
+				.useMissingTranslationHandlerLog()
 				.useLocalStorage();
 		}]);
 });

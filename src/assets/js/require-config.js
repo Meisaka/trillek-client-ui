@@ -9,6 +9,7 @@ require.config({
 		angularTranslate: '../bower_components/angular-translate/angular-translate',
 		angularTranslateStorageCookie: '../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie',
 		angularTranslateStorageLocal: '../bower_components/angular-translate-storage-local/angular-translate-storage-local',
+		angularTranslateHandlerLog: '../bower_components/angular-translate-handler-log/angular-translate-handler-log',
 		angularMocks: '../bower_components/angular-mocks/angular-mocks',
 		trillek: './assets/js/trillek'
 	},
@@ -29,7 +30,10 @@ require.config({
 			deps: ['angularTranslate']
 		},
 		angularTranslateStorageLocal: {
-			deps: [ 'angularTranslateStorageCookie']
+			deps: ['angularTranslateStorageCookie']
+		},
+		angularTranslateHandlerLog: {
+			deps: ['angularTranslate']
 		},
 		angularMocks: {
 			deps: ['angular'],
