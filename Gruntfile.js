@@ -111,12 +111,16 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-jsdoc');
 
+	grunt.registerTask('test', [
+		'jasmine',
+		'jshint'
+	]);
+
 	grunt.registerTask('build', [
 		'copy',
 		'compass',
 		'imagemin',
-		'jshint',
-		'jasmine',
+		'test',
 		'jsdoc',
 		'requirejs',
 		'compress'

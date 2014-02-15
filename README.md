@@ -58,9 +58,7 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 ## Tests
 
-All tests are stored within `./tests`, they use [Jasmine][] for assertions and execution. You can run the tests by opening `./tests/index.html` in your browser.
-
-Although the tests should run in any modern browser, the main one we need to worry about is Chrome / Chromium. This is because the game will render the UI using WebKit / Blink, the rendering engine used within Chrome.
+All tests are stored within `./specs`, they use [Jasmine][] for assertions and execution. You can run the tests with `grunt test` or as part of the default `grunt` build.
 
 ## Building
 
