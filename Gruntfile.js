@@ -98,6 +98,12 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		watch: {
+			test: {
+				files: ['./src/**', './specs/**/*.spec.js'],
+				tasks: 'test'
+			}
+		},
 		clean: ['./build/assets/**', './doc']
 	});
 
@@ -109,11 +115,17 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-jsdoc');
 
 	grunt.registerTask('test', [
 		'jasmine',
 		'jshint'
+	]);
+
+	grunt.registerTask('test:continuous', [
+		'test',
+		'watch:test'
 	]);
 
 	grunt.registerTask('build', [

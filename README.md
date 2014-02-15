@@ -60,6 +60,8 @@ Or use any other HTTP server of you choosing, there are even quite a few for [no
 
 All tests are stored within `./specs`, they use [Jasmine][] for assertions and execution. You can run the tests with `grunt test` or as part of the default `grunt` build.
 
+You can have the tests run whenever a file is changed within the `src` or `./specs` directories by executing `grunt test:continuous`.
+
 ## Building
 
 Presuming you have all of the dependencies installed correctly, you can simply execute grunt.

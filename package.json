@@ -12,6 +12,7 @@
     "grunt-contrib-clean": "*",
     "grunt-jsdoc": "*",
     "grunt-contrib-jasmine": "~0.5.2",
-    "grunt-template-jasmine-requirejs": "~0.1.9"
+    "grunt-template-jasmine-requirejs": "~0.1.9",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }
