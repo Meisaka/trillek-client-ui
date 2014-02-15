@@ -56,7 +56,7 @@ python -m SimpleHTTPServer
 
 Or use any other HTTP server of you choosing, there are even quite a few for [node][] on [npm][].
 
-## Tests
+## Tests [![Travis CI state][travis-image]][travis]
 
 All tests are stored within `./specs`, they use [Jasmine][] for assertions and execution. You can run the tests with `grunt test` or as part of the default `grunt` build.
 
@@ -130,3 +130,5 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [grunt]: http://gruntjs.com/
 [requirejs]: http://requirejs.org/
 [almond]: https://github.com/jrburke/almond
+[travis]: https://travis-ci.org/trillek-team/trillek-client-ui
+[travis-image]: https://travis-ci.org/trillek-team/trillek-client-ui.png
