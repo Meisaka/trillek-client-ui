@@ -26,6 +26,8 @@ define(function (require) {
 			beforeEach(function () {
 				global.game.play = jasmine.createSpy('play');
 				global.game.quit = jasmine.createSpy('quit');
+				global.game.resume = jasmine.createSpy('resume');
+				global.game.stop = jasmine.createSpy('stop');
 			});
 
 			it('should proxy play to the global object version', function () {
@@ -36,6 +38,16 @@ define(function (require) {
 			it('should proxy quit to the global object version', function () {
 				service.quit();
 				expect(global.game.quit).toHaveBeenCalled();
+			});
+
+			it('should proxy resume to the global object version', function () {
+				service.resume();
+				expect(global.game.resume).toHaveBeenCalled();
+			});
+
+			it('should proxy stop to the global object version', function () {
+				service.stop();
+				expect(global.game.stop).toHaveBeenCalled();
 			});
 		});
 	});

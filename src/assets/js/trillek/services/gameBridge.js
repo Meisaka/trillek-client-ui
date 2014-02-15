@@ -23,6 +23,12 @@ define(function () {
 			},
 			quit: function () {
 				executeGameMethod('quit');
+			},
+			resume: function () {
+				executeGameMethod('resume');
+			},
+			stop: function () {
+				executeGameMethod('stop');
 			}
 		};
 	}
