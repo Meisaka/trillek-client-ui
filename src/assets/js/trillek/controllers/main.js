@@ -5,5 +5,6 @@ define(function (require) {
 
 	return angular.module('trillek.controllers', [])
 		.controller('MainMenuController', require('./MainMenuController'))
-		.controller('SelectLanguageController', require('./SelectLanguageController'));
+		.controller('SelectLanguageController', require('./SelectLanguageController'))
+		.controller('PlayController', require('./PlayController'));
 });

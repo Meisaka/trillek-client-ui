@@ -16,7 +16,8 @@ define(function (require) {
 					controller: 'SelectLanguageController'
 				})
 				.when(config.routes.play, {
-					template: require('text!trillek/views/play.html')
+					template: require('text!trillek/views/play.html'),
+					controller: 'PlayController'
 				})
 				.otherwise({
 					redirectTo: config.routes.mainMenu
