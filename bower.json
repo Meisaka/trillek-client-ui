@@ -12,5 +12,9 @@
     "angular-mocks": "~1.2.8",
     "angular-translate-storage-local": "~0.1.6",
     "angular-cookies": "~1.2.9"
+  },
+  "resolutions": {
+    "angular": "~1.2.7",
+    "angular-cookies": "~1.2.9"
   }
 }
