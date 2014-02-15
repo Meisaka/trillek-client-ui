@@ -16,6 +16,6 @@
   },
   "resolutions": {
     "angular": "~1.2.7",
-    "angular-cookies": "~1.2.13"
+    "angular-translate": "2.0.0"
   }
 }
