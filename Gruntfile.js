@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 		jasmine: {
 			src: './src/assets/js/trillek/**/*.js',
 			options: {
-				specs: './tests/specs/**/*.spec.js',
+				specs: './specs/**/*.spec.js',
 				template: require('grunt-template-jasmine-requirejs'),
 				templateOptions: {
 					requireConfigFile: './src/assets/js/require-config.js',
