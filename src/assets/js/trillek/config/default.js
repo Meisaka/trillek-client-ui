@@ -5,7 +5,8 @@ define({
 			en: 'english',
 			pl: 'polski',
 			nl: 'nederlands',
-			da: 'dansk'
+			da: 'dansk',
+			sv: 'svenska'
 		}
 	},
 	routes: {
