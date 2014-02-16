@@ -4,7 +4,11 @@ define({
 		availableLanguages: {
 			en: 'english',
 			pl: 'polski',
-			ja: '日本語'
+			nl: 'nederlands',
+			da: 'dansk',
+			sv: 'svenska',
+			ja: '日本語',
+			ru: 'русский'
 		}
 	},
 	routes: {

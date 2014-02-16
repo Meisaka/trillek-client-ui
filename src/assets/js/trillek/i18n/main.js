@@ -10,7 +10,11 @@ define(function (require) {
 	var languages = {
 		en: require('./en'),
 		pl: require('./pl'),
-		ja: require('./ja')
+		nl: require('./nl'),
+		da: require('./da'),
+		sv: require('./sv'),
+		ja: require('./ja'),
+		ru: require('./ru')
 	};
 
 	return angular.module('trillek.i18n', ['pascalprecht.translate'])
