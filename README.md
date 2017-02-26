@@ -118,7 +118,7 @@ Unleashed on the world under [unlicence][] (see `./UNLICENCE`), enjoy.
 [tdd]: http://en.wikipedia.org/wiki/Test-driven_development
 [unlicence]: http://unlicense.org/
 [chai]: http://chaijs.com/
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [trillek]: http://trillek.org/
 [bundler]: http://bundler.io/
 [bower]: http://bower.io/
